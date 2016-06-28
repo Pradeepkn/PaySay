@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C6B4DF67A5C3B6FE5EED40E6 /* libPods-PaySay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1302C96F93583778A9AB3752 /* libPods-PaySay.a */; };
+		E92318131D15546B009233B9 /* PSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92318121D15546B009233B9 /* PSHomeViewController.m */; };
+		E92318171D15E284009233B9 /* MyExpensesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E92318161D15E284009233B9 /* MyExpensesTableViewCell.m */; };
+		E97D73F21D22496200ADF98E /* UserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E97D73F11D22496200ADF98E /* UserEntity.m */; };
+		E97D73F51D22504200ADF98E /* VaultEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E97D73F41D22504200ADF98E /* VaultEntity.m */; };
+		E97D73F91D22540800ADF98E /* SignInApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E97D73F81D22540800ADF98E /* SignInApi.m */; };
+		E97D74001D225AA900ADF98E /* SignUpApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E97D73FF1D225AA900ADF98E /* SignUpApi.m */; };
+		E9D546471D1538FE00504DAD /* Multicolore.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9D546461D1538FE00504DAD /* Multicolore.otf */; };
+		E9D5464C1D15391F00504DAD /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9D546481D15391F00504DAD /* Montserrat-Bold.otf */; };
+		E9D5464D1D15391F00504DAD /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9D546491D15391F00504DAD /* Montserrat-Light.otf */; };
+		E9D5464E1D15391F00504DAD /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9D5464A1D15391F00504DAD /* Montserrat-Regular.otf */; };
+		E9D5464F1D15391F00504DAD /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9D5464B1D15391F00504DAD /* Montserrat-SemiBold.otf */; };
+		E9D5465D1D15478F00504DAD /* NSAttributedString+StringWithImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D546561D15478F00504DAD /* NSAttributedString+StringWithImage.m */; };
+		E9D5465E1D15478F00504DAD /* UIButton+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D546581D15478F00504DAD /* UIButton+Border.m */; };
+		E9D5465F1D15478F00504DAD /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D5465A1D15478F00504DAD /* UIColor+AppColor.m */; };
+		E9D546601D15478F00504DAD /* UITextField+PaddingText.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D5465C1D15478F00504DAD /* UITextField+PaddingText.m */; };
+		E9FD29B71D040DF50099373D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FD29B61D040DF50099373D /* main.m */; };
+		E9FD29C01D040DF50099373D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9FD29BE1D040DF50099373D /* Main.storyboard */; };
+		E9FD29C31D040DF50099373D /* PaySay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9FD29C11D040DF50099373D /* PaySay.xcdatamodeld */; };
+		E9FD29C51D040DF50099373D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9FD29C41D040DF50099373D /* Assets.xcassets */; };
+		E9FD29C81D040DF50099373D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9FD29C61D040DF50099373D /* LaunchScreen.storyboard */; };
+		E9FD29D51D04120A0099373D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FD29D21D04120A0099373D /* AppDelegate.m */; };
+		E9FD29DC1D0412CE0099373D /* PSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FD29DB1D0412CE0099373D /* PSLoginViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		10C14BC05A3AD55F74E897F8 /* Pods-PaySay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaySay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaySay/Pods-PaySay.debug.xcconfig"; sourceTree = "<group>"; };
+		1302C96F93583778A9AB3752 /* libPods-PaySay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaySay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB77097DA4F27A2800FE7025 /* Pods-PaySay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaySay.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaySay/Pods-PaySay.release.xcconfig"; sourceTree = "<group>"; };
+		E92318111D15546B009233B9 /* PSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSHomeViewController.h; sourceTree = "<group>"; };
+		E92318121D15546B009233B9 /* PSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSHomeViewController.m; sourceTree = "<group>"; };
+		E92318151D15E284009233B9 /* MyExpensesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyExpensesTableViewCell.h; sourceTree = "<group>"; };
+		E92318161D15E284009233B9 /* MyExpensesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyExpensesTableViewCell.m; sourceTree = "<group>"; };
+		E97D73F01D22496200ADF98E /* UserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEntity.h; sourceTree = "<group>"; };
+		E97D73F11D22496200ADF98E /* UserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEntity.m; sourceTree = "<group>"; };
+		E97D73F31D22504200ADF98E /* VaultEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VaultEntity.h; sourceTree = "<group>"; };
+		E97D73F41D22504200ADF98E /* VaultEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VaultEntity.m; sourceTree = "<group>"; };
+		E97D73F71D22540800ADF98E /* SignInApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInApi.h; sourceTree = "<group>"; };
+		E97D73F81D22540800ADF98E /* SignInApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInApi.m; sourceTree = "<group>"; };
+		E97D73FD1D22586900ADF98E /* ApiKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiKeys.h; sourceTree = "<group>"; };
+		E97D73FE1D225AA900ADF98E /* SignUpApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpApi.h; sourceTree = "<group>"; };
+		E97D73FF1D225AA900ADF98E /* SignUpApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpApi.m; sourceTree = "<group>"; };
+		E9D546461D1538FE00504DAD /* Multicolore.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Multicolore.otf; sourceTree = "<group>"; };
+		E9D546481D15391F00504DAD /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		E9D546491D15391F00504DAD /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		E9D5464A1D15391F00504DAD /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		E9D5464B1D15391F00504DAD /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
+		E9D546551D15478F00504DAD /* NSAttributedString+StringWithImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+StringWithImage.h"; sourceTree = "<group>"; };
+		E9D546561D15478F00504DAD /* NSAttributedString+StringWithImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+StringWithImage.m"; sourceTree = "<group>"; };
+		E9D546571D15478F00504DAD /* UIButton+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Border.h"; sourceTree = "<group>"; };
+		E9D546581D15478F00504DAD /* UIButton+Border.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Border.m"; sourceTree = "<group>"; };
+		E9D546591D15478F00504DAD /* UIColor+AppColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AppColor.h"; sourceTree = "<group>"; };
+		E9D5465A1D15478F00504DAD /* UIColor+AppColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AppColor.m"; sourceTree = "<group>"; };
+		E9D5465B1D15478F00504DAD /* UITextField+PaddingText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+PaddingText.h"; sourceTree = "<group>"; };
+		E9D5465C1D15478F00504DAD /* UITextField+PaddingText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PaddingText.m"; sourceTree = "<group>"; };
+		E9FD29B21D040DF50099373D /* PaySay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaySay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9FD29B61D040DF50099373D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E9FD29BF1D040DF50099373D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E9FD29C21D040DF50099373D /* PaySay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PaySay.xcdatamodel; sourceTree = "<group>"; };
+		E9FD29C41D040DF50099373D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E9FD29C71D040DF50099373D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E9FD29C91D040DF50099373D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9FD29D11D04120A0099373D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E9FD29D21D04120A0099373D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E9FD29DA1D0412CE0099373D /* PSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSLoginViewController.h; sourceTree = "<group>"; };
+		E9FD29DB1D0412CE0099373D /* PSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSLoginViewController.m; sourceTree = "<group>"; };
+		E9FD29E11D054FEE0099373D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E9FD29E21D0551710099373D /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E9FD29AF1D040DF50099373D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6B4DF67A5C3B6FE5EED40E6 /* libPods-PaySay.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D5F918A1D3F84AFE3C937D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				10C14BC05A3AD55F74E897F8 /* Pods-PaySay.debug.xcconfig */,
+				CB77097DA4F27A2800FE7025 /* Pods-PaySay.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A695A1364BE7D5245E5DFA12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1302C96F93583778A9AB3752 /* libPods-PaySay.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E92318141D15E270009233B9 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				E92318151D15E284009233B9 /* MyExpensesTableViewCell.h */,
+				E92318161D15E284009233B9 /* MyExpensesTableViewCell.m */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		E97D73EF1D22410700ADF98E /* APIModels */ = {
+			isa = PBXGroup;
+			children = (
+				E97D73F01D22496200ADF98E /* UserEntity.h */,
+				E97D73F11D22496200ADF98E /* UserEntity.m */,
+				E97D73F31D22504200ADF98E /* VaultEntity.h */,
+				E97D73F41D22504200ADF98E /* VaultEntity.m */,
+			);
+			path = APIModels;
+			sourceTree = "<group>";
+		};
+		E97D73F61D2253F900ADF98E /* ApiObjects */ = {
+			isa = PBXGroup;
+			children = (
+				E97D73F71D22540800ADF98E /* SignInApi.h */,
+				E97D73F81D22540800ADF98E /* SignInApi.m */,
+				E97D73FE1D225AA900ADF98E /* SignUpApi.h */,
+				E97D73FF1D225AA900ADF98E /* SignUpApi.m */,
+			);
+			path = ApiObjects;
+			sourceTree = "<group>";
+		};
+		E9D546451D1538E900504DAD /* FontFamily */ = {
+			isa = PBXGroup;
+			children = (
+				E9D546461D1538FE00504DAD /* Multicolore.otf */,
+				E9D546481D15391F00504DAD /* Montserrat-Bold.otf */,
+				E9D546491D15391F00504DAD /* Montserrat-Light.otf */,
+				E9D5464A1D15391F00504DAD /* Montserrat-Regular.otf */,
+				E9D5464B1D15391F00504DAD /* Montserrat-SemiBold.otf */,
+			);
+			path = FontFamily;
+			sourceTree = "<group>";
+		};
+		E9D546531D15478F00504DAD /* UtilityClasses */ = {
+			isa = PBXGroup;
+			children = (
+				E9D546541D15478F00504DAD /* CategoryClasses */,
+			);
+			path = UtilityClasses;
+			sourceTree = "<group>";
+		};
+		E9D546541D15478F00504DAD /* CategoryClasses */ = {
+			isa = PBXGroup;
+			children = (
+				E9D546551D15478F00504DAD /* NSAttributedString+StringWithImage.h */,
+				E9D546561D15478F00504DAD /* NSAttributedString+StringWithImage.m */,
+				E9D546571D15478F00504DAD /* UIButton+Border.h */,
+				E9D546581D15478F00504DAD /* UIButton+Border.m */,
+				E9D546591D15478F00504DAD /* UIColor+AppColor.h */,
+				E9D5465A1D15478F00504DAD /* UIColor+AppColor.m */,
+				E9D5465B1D15478F00504DAD /* UITextField+PaddingText.h */,
+				E9D5465C1D15478F00504DAD /* UITextField+PaddingText.m */,
+			);
+			path = CategoryClasses;
+			sourceTree = "<group>";
+		};
+		E9FD29A91D040DF50099373D = {
+			isa = PBXGroup;
+			children = (
+				E9FD29B41D040DF50099373D /* PaySay */,
+				E9FD29B31D040DF50099373D /* Products */,
+				7D5F918A1D3F84AFE3C937D9 /* Pods */,
+				A695A1364BE7D5245E5DFA12 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E9FD29B31D040DF50099373D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9FD29B21D040DF50099373D /* PaySay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9FD29B41D040DF50099373D /* PaySay */ = {
+			isa = PBXGroup;
+			children = (
+				E97D73F61D2253F900ADF98E /* ApiObjects */,
+				E97D73EF1D22410700ADF98E /* APIModels */,
+				E92318141D15E270009233B9 /* TableCells */,
+				E9FD29D01D04120A0099373D /* AppDelegate */,
+				E9FD29D41D04120A0099373D /* ViewControllers */,
+				E9FD29D31D04120A0099373D /* StoryBoards */,
+				E9FD29CF1D04120A0099373D /* AppConstants */,
+				E9D546531D15478F00504DAD /* UtilityClasses */,
+				E9D546451D1538E900504DAD /* FontFamily */,
+				E9FD29C41D040DF50099373D /* Assets.xcassets */,
+				E9FD29BE1D040DF50099373D /* Main.storyboard */,
+				E9FD29C61D040DF50099373D /* LaunchScreen.storyboard */,
+				E9FD29C91D040DF50099373D /* Info.plist */,
+				E9FD29C11D040DF50099373D /* PaySay.xcdatamodeld */,
+				E9FD29B51D040DF50099373D /* Supporting Files */,
+			);
+			path = PaySay;
+			sourceTree = "<group>";
+		};
+		E9FD29B51D040DF50099373D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9FD29B61D040DF50099373D /* main.m */,
+				E9FD29E11D054FEE0099373D /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E9FD29CF1D04120A0099373D /* AppConstants */ = {
+			isa = PBXGroup;
+			children = (
+				E9FD29E21D0551710099373D /* AppConstants.h */,
+				E97D73FD1D22586900ADF98E /* ApiKeys.h */,
+			);
+			path = AppConstants;
+			sourceTree = "<group>";
+		};
+		E9FD29D01D04120A0099373D /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				E9FD29D11D04120A0099373D /* AppDelegate.h */,
+				E9FD29D21D04120A0099373D /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		E9FD29D31D04120A0099373D /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		E9FD29D41D04120A0099373D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E9FD29DA1D0412CE0099373D /* PSLoginViewController.h */,
+				E9FD29DB1D0412CE0099373D /* PSLoginViewController.m */,
+				E92318111D15546B009233B9 /* PSHomeViewController.h */,
+				E92318121D15546B009233B9 /* PSHomeViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E9FD29B11D040DF50099373D /* PaySay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9FD29CC1D040DF50099373D /* Build configuration list for PBXNativeTarget "PaySay" */;
+			buildPhases = (
+				487DCB37301B46FCC5A8409F /* Check Pods Manifest.lock */,
+				E9FD29AE1D040DF50099373D /* Sources */,
+				E9FD29AF1D040DF50099373D /* Frameworks */,
+				E9FD29B01D040DF50099373D /* Resources */,
+				62284DE21D96ABEF15B2A614 /* Embed Pods Frameworks */,
+				BEC152414262DC241BA2D569 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PaySay;
+			productName = PaySay;
+			productReference = E9FD29B21D040DF50099373D /* PaySay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E9FD29AA1D040DF50099373D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Pradeep;
+				TargetAttributes = {
+					E9FD29B11D040DF50099373D = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = E9FD29AD1D040DF50099373D /* Build configuration list for PBXProject "PaySay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E9FD29A91D040DF50099373D;
+			productRefGroup = E9FD29B31D040DF50099373D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9FD29B11D040DF50099373D /* PaySay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E9FD29B01D040DF50099373D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9D5464C1D15391F00504DAD /* Montserrat-Bold.otf in Resources */,
+				E9D5464F1D15391F00504DAD /* Montserrat-SemiBold.otf in Resources */,
+				E9FD29C81D040DF50099373D /* LaunchScreen.storyboard in Resources */,
+				E9D546471D1538FE00504DAD /* Multicolore.otf in Resources */,
+				E9FD29C51D040DF50099373D /* Assets.xcassets in Resources */,
+				E9FD29C01D040DF50099373D /* Main.storyboard in Resources */,
+				E9D5464E1D15391F00504DAD /* Montserrat-Regular.otf in Resources */,
+				E9D5464D1D15391F00504DAD /* Montserrat-Light.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		487DCB37301B46FCC5A8409F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		62284DE21D96ABEF15B2A614 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PaySay/Pods-PaySay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEC152414262DC241BA2D569 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PaySay/Pods-PaySay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E9FD29AE1D040DF50099373D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E97D74001D225AA900ADF98E /* SignUpApi.m in Sources */,
+				E9FD29C31D040DF50099373D /* PaySay.xcdatamodeld in Sources */,
+				E97D73F51D22504200ADF98E /* VaultEntity.m in Sources */,
+				E9D5465E1D15478F00504DAD /* UIButton+Border.m in Sources */,
+				E97D73F21D22496200ADF98E /* UserEntity.m in Sources */,
+				E92318171D15E284009233B9 /* MyExpensesTableViewCell.m in Sources */,
+				E97D73F91D22540800ADF98E /* SignInApi.m in Sources */,
+				E92318131D15546B009233B9 /* PSHomeViewController.m in Sources */,
+				E9D546601D15478F00504DAD /* UITextField+PaddingText.m in Sources */,
+				E9D5465D1D15478F00504DAD /* NSAttributedString+StringWithImage.m in Sources */,
+				E9FD29DC1D0412CE0099373D /* PSLoginViewController.m in Sources */,
+				E9FD29B71D040DF50099373D /* main.m in Sources */,
+				E9D5465F1D15478F00504DAD /* UIColor+AppColor.m in Sources */,
+				E9FD29D51D04120A0099373D /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E9FD29BE1D040DF50099373D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9FD29BF1D040DF50099373D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E9FD29C61D040DF50099373D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9FD29C71D040DF50099373D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E9FD29CA1D040DF50099373D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Taru Agrawal (Q2W6YH8JBX)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Taru Agrawal (Q2W6YH8JBX)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "4ad22e1e-65c3-498e-a285-fcb226c9361b";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E9FD29CB1D040DF50099373D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "4ad22e1e-65c3-498e-a285-fcb226c9361b";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E9FD29CD1D040DF50099373D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10C14BC05A3AD55F74E897F8 /* Pods-PaySay.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Taru Agrawal (Q2W6YH8JBX)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Taru Agrawal (Q2W6YH8JBX)";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = PaySay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = in.eatongo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4ad22e1e-65c3-498e-a285-fcb226c9361b";
+			};
+			name = Debug;
+		};
+		E9FD29CE1D040DF50099373D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB77097DA4F27A2800FE7025 /* Pods-PaySay.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = PaySay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = in.eatongo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E9FD29AD1D040DF50099373D /* Build configuration list for PBXProject "PaySay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9FD29CA1D040DF50099373D /* Debug */,
+				E9FD29CB1D040DF50099373D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9FD29CC1D040DF50099373D /* Build configuration list for PBXNativeTarget "PaySay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9FD29CD1D040DF50099373D /* Debug */,
+				E9FD29CE1D040DF50099373D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E9FD29C11D040DF50099373D /* PaySay.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E9FD29C21D040DF50099373D /* PaySay.xcdatamodel */,
+			);
+			currentVersion = E9FD29C21D040DF50099373D /* PaySay.xcdatamodel */;
+			path = PaySay.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E9FD29AA1D040DF50099373D /* Project object */;
+}

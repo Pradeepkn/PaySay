@@ -1,0 +1,65 @@
+PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - BLMultiColorLoader (0.1.6)
+  - IQKeyboardManager (4.0.3)
+  - QRCodeReaderViewController (4.0.1)
+  - TTPLAPIManager (0.1.1):
+    - AFNetworking (~> 2.4)
+    - XMLDictionary (~> 1.4)
+  - TTPLLibrary (0.1.0)
+  - WebViewJavascriptBridge (5.0.5)
+  - XMLDictionary (1.4)
+
+DEPENDENCIES:
+  - BLMultiColorLoader
+  - IQKeyboardManager
+  - QRCodeReaderViewController (~> 4.0.1)
+  - TTPLAPIManager (from `https://github.com/iosttpl/TTPLAPIManager.git`)
+  - TTPLLibrary (from `https://github.com/iosttpl/TTPLLibrary.git`)
+  - WebViewJavascriptBridge (~> 5.0)
+
+EXTERNAL SOURCES:
+  TTPLAPIManager:
+    :git: https://github.com/iosttpl/TTPLAPIManager.git
+  TTPLLibrary:
+    :git: https://github.com/iosttpl/TTPLLibrary.git
+
+CHECKOUT OPTIONS:
+  TTPLAPIManager:
+    :commit: 697f79ec28ca8f96c813769bd12134597d301001
+    :git: https://github.com/iosttpl/TTPLAPIManager.git
+  TTPLLibrary:
+    :commit: 87372b69c55fcdc6f4e1307eb29e51393ed225db
+    :git: https://github.com/iosttpl/TTPLLibrary.git
+
+SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  BLMultiColorLoader: 9208e4541a88ec12e0da5af0e3619a805ab7ff6e
+  IQKeyboardManager: be9695ffc5a52077deb4847608f338771022d6d1
+  QRCodeReaderViewController: 6538745c8f4ffa9407a26bd7f9489ea01739e7b0
+  TTPLAPIManager: a2360fad848ae9dcb05056292cf0d479e325264c
+  TTPLLibrary: d88a85ad87aab8929b1da53382d092f75ad3d365
+  WebViewJavascriptBridge: a4d502315f1b8d9a51cd6a9174147ed567ec3bc5
+  XMLDictionary: f9f51601ba76678b594ab485f2b00ec1fed23724
+
+COCOAPODS: 0.39.0
