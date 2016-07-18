@@ -17,11 +17,15 @@
 #import "NSAttributedString+StringWithImage.h"
 #import "SignInApi.h"
 #import "SignUpApi.h"
+#import "UserEntity.h"
+#import "VaultEntity.h"
+#import "VerifyTokenApi.h"
 
 static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
 
 @interface PSLoginViewController ()<QRCodeReaderDelegate> {
     QRCodeReaderViewController *vc;
+    NSString *userEmailOrMobileName;
 }
 
 @property (assign, nonatomic) NSInteger numberOfDigit;
@@ -145,10 +149,8 @@ static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
 //        return;
 //    }
     [self setTextViewColors];
-    self.otpContainerView.hidden = NO;
-    [self.otpTextField becomeFirstResponder];
     
-    __weak PSLoginViewController *weakSelf = self;
+//    __weak PSLoginViewController *weakSelf = self;
     SignUpApi *signUpApi = [SignUpApi new];
     signUpApi.username = self.signUpFullNameTxtFld.text;
     signUpApi.password = self.signUpPasswordTxtFld.text;
@@ -156,11 +158,23 @@ static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
     signUpApi.phoneNumber = self.signUpPhoneNoTxtFld.text;
     [[APIManager sharedInstance]makeAPIRequestWithObject:signUpApi shouldAddOAuthHeader:NO andCompletionBlock:^(NSDictionary *responseDictionary, NSError *error) {
         if (!error) {
-            
+            userEmailOrMobileName = self.signUpEmailTxtFld.text;
+            self.otpContainerView.hidden = NO;
+            [self.otpTextField becomeFirstResponder];
         }else{
         }
     }];
-    
+}
+
+- (void)verifyToken:(NSString *)userName andPassword:(NSString *)password {
+    VerifyTokenApi *verifyTokenApi = [VerifyTokenApi new];
+    verifyTokenApi.username = userName;
+    verifyTokenApi.password = password;
+    [[APIManager sharedInstance]makeAPIRequestWithObject:verifyTokenApi shouldAddOAuthHeader:NO andCompletionBlock:^(NSDictionary *responseDictionary, NSError *error) {
+        if (!error) {
+        }else{
+        }
+    }];
 }
 
 - (IBAction)forgotPasswordButtonClicked:(id)sender {
@@ -178,7 +192,7 @@ static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
     if ([self.signInPhoneEmailTxtFld.text isValidEmail]) {
         ;
     }
-    __weak PSLoginViewController *weakSelf = self;
+//    __weak PSLoginViewController *weakSelf = self;
     SignInApi *signInApi = [SignInApi new];
     signInApi.username = self.signInPhoneEmailTxtFld.text;
     signInApi.password = self.signInPasswordTxtFld.text;
@@ -197,6 +211,7 @@ static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
 - (IBAction)verifyOTPButtonClicked:(id)sender {
     self.otpContainerView.hidden = YES;
     [self.view endEditing:YES];
+    [self verifyToken:userEmailOrMobileName andPassword:self.otpTextField.text];
 }
 
 - (IBAction)backToLoginButtonClicked:(id)sender {

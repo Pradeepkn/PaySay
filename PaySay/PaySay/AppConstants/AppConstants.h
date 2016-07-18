@@ -21,6 +21,9 @@
 
 #define OS_VERSION_BEFORE(version) [[[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."][0] intValue] < version
 
+#define CLIENT_KEY @"CRDNwxmwHj688CuVjLEcq7ZudupVUIbke2Jflda7"
+#define CLIENT_SECRET @"rbkopL6SLTPbmoEAViDglnwPQdVv4aC62UC6vxC16PiA4HIT5wY9nfgttRSiZgVEOZY7zfxfUk1tLNATq3i9Itbmuwb7sHK8gBC5epLxNqCIju6zYE6eS4MEFAbCZGjc"
+
 static NSString *const kUsernameKey = @"username";
 static NSString *const kPasswordKey = @"password";
 static NSString *const kGrantTypeKey = @"grant_type";
@@ -31,5 +34,7 @@ static NSString *const kClientSecretKey = @"client_secret";
 static NSString *const kPhoneNumberKey = @"phone_number";
 static NSString *const kEmailKey = @"email";
 static NSString *const kNameKey = @"name";
+
+static NSString *const kRegistraionId = @"registration_id";
 
 #endif /* AppConstants_h */

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "RegisterDeviceTokenApi.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +17,45 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+#ifdef __IPHONE_8_0
+    //Configuration for local/remote push notifications on iOS 8 and later.
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+        //The following configurations are necessary, otherwise, iOS system will deliver the pushes silently.
+        UIUserNotificationType types         = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        
+        //register for remote push
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+        
+    }
+#else
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes: UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert];
+#endif
+
     return YES;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    RegisterDeviceTokenApi *registerDeviceTokenApi = [RegisterDeviceTokenApi new];
+    NSString * deviceTokenString = [[[[deviceToken description]
+                                      stringByReplacingOccurrencesOfString: @"<" withString: @""]
+                                     stringByReplacingOccurrencesOfString: @">" withString: @""]
+                                    stringByReplacingOccurrencesOfString: @" " withString: @""];
+
+    registerDeviceTokenApi.registrationId = deviceTokenString;
+    [[APIManager sharedInstance]makeAPIRequestWithObject:registerDeviceTokenApi shouldAddOAuthHeader:NO andCompletionBlock:^(NSDictionary *responseDictionary, NSError *error) {
+        if (!error) {
+        }else{
+        }
+    }];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    NSLog(@"Did fail to register for remote notification with error (failed to retrieve device token): %@", error);
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

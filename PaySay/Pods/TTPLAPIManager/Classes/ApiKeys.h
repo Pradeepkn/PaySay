@@ -13,8 +13,8 @@
 
 #pragma mark - Configuration -
 // URLs
-static NSString *const APIStaginUrl = @"https://sandbox.letspool.co/v2/";
-static NSString *const APIProductionUrl = @"https://paysay.me/v2/";
+static NSString *const APIStaginUrl = @"https://sandbox.letspool.co";
+static NSString *const APIProductionUrl = @"https://paysay.me";
 
 // Change the flag based on server.
 static BOOL ShouldUseProductionUrl = NO;

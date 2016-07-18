@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C6B4DF67A5C3B6FE5EED40E6 /* libPods-PaySay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1302C96F93583778A9AB3752 /* libPods-PaySay.a */; };
+		E907D2881D2EACEF0074845E /* VerifyTokenApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D2871D2EACEF0074845E /* VerifyTokenApi.m */; };
+		E907D28B1D2EAEA60074845E /* RegisterDeviceTokenApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D28A1D2EAEA60074845E /* RegisterDeviceTokenApi.m */; };
 		E92318131D15546B009233B9 /* PSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92318121D15546B009233B9 /* PSHomeViewController.m */; };
 		E92318171D15E284009233B9 /* MyExpensesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E92318161D15E284009233B9 /* MyExpensesTableViewCell.m */; };
 		E97D73F21D22496200ADF98E /* UserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E97D73F11D22496200ADF98E /* UserEntity.m */; };
@@ -36,6 +38,10 @@
 		10C14BC05A3AD55F74E897F8 /* Pods-PaySay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaySay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaySay/Pods-PaySay.debug.xcconfig"; sourceTree = "<group>"; };
 		1302C96F93583778A9AB3752 /* libPods-PaySay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaySay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB77097DA4F27A2800FE7025 /* Pods-PaySay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaySay.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaySay/Pods-PaySay.release.xcconfig"; sourceTree = "<group>"; };
+		E907D2861D2EACEF0074845E /* VerifyTokenApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyTokenApi.h; sourceTree = "<group>"; };
+		E907D2871D2EACEF0074845E /* VerifyTokenApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifyTokenApi.m; sourceTree = "<group>"; };
+		E907D2891D2EAEA60074845E /* RegisterDeviceTokenApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterDeviceTokenApi.h; sourceTree = "<group>"; };
+		E907D28A1D2EAEA60074845E /* RegisterDeviceTokenApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterDeviceTokenApi.m; sourceTree = "<group>"; };
 		E92318111D15546B009233B9 /* PSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSHomeViewController.h; sourceTree = "<group>"; };
 		E92318121D15546B009233B9 /* PSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSHomeViewController.m; sourceTree = "<group>"; };
 		E92318151D15E284009233B9 /* MyExpensesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyExpensesTableViewCell.h; sourceTree = "<group>"; };
@@ -133,6 +139,10 @@
 				E97D73F81D22540800ADF98E /* SignInApi.m */,
 				E97D73FE1D225AA900ADF98E /* SignUpApi.h */,
 				E97D73FF1D225AA900ADF98E /* SignUpApi.m */,
+				E907D2861D2EACEF0074845E /* VerifyTokenApi.h */,
+				E907D2871D2EACEF0074845E /* VerifyTokenApi.m */,
+				E907D2891D2EAEA60074845E /* RegisterDeviceTokenApi.h */,
+				E907D28A1D2EAEA60074845E /* RegisterDeviceTokenApi.m */,
 			);
 			path = ApiObjects;
 			sourceTree = "<group>";
@@ -386,6 +396,7 @@
 				E97D74001D225AA900ADF98E /* SignUpApi.m in Sources */,
 				E9FD29C31D040DF50099373D /* PaySay.xcdatamodeld in Sources */,
 				E97D73F51D22504200ADF98E /* VaultEntity.m in Sources */,
+				E907D28B1D2EAEA60074845E /* RegisterDeviceTokenApi.m in Sources */,
 				E9D5465E1D15478F00504DAD /* UIButton+Border.m in Sources */,
 				E97D73F21D22496200ADF98E /* UserEntity.m in Sources */,
 				E92318171D15E284009233B9 /* MyExpensesTableViewCell.m in Sources */,
@@ -394,6 +405,7 @@
 				E9D546601D15478F00504DAD /* UITextField+PaddingText.m in Sources */,
 				E9D5465D1D15478F00504DAD /* NSAttributedString+StringWithImage.m in Sources */,
 				E9FD29DC1D0412CE0099373D /* PSLoginViewController.m in Sources */,
+				E907D2881D2EACEF0074845E /* VerifyTokenApi.m in Sources */,
 				E9FD29B71D040DF50099373D /* main.m in Sources */,
 				E9D5465F1D15478F00504DAD /* UIColor+AppColor.m in Sources */,
 				E9FD29D51D04120A0099373D /* AppDelegate.m in Sources */,
