@@ -170,6 +170,7 @@ static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
     VerifyTokenApi *verifyTokenApi = [VerifyTokenApi new];
     verifyTokenApi.username = userName;
     verifyTokenApi.password = password;
+    self.otpTextField.text = @"";
     [[APIManager sharedInstance]makeAPIRequestWithObject:verifyTokenApi shouldAddOAuthHeader:NO andCompletionBlock:^(NSDictionary *responseDictionary, NSError *error) {
         if (!error) {
         }else{
