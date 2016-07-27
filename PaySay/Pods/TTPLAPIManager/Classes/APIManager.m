@@ -149,6 +149,7 @@ static NSString *const RootKey = @"Root";
     } else if ([response isKindOfClass:[NSArray class]]){
         responseDictionary = @{RootKey : response};
     }
+    NSLog(@"Response = %@", responseDictionary);
     [apiObject parseAPIResponse:responseDictionary];
     completionCallback(responseDictionary, nil);
 }

@@ -7,19 +7,21 @@
 //
 
 #import "PSLoginViewController.h"
-#import "QRCodeReader.h"
-#import "QRCodeReaderViewController.h"
-#import "UIColor+AppColor.h"
-#import "UITextField+PaddingText.h"
-#import "AppConstants.h"
-#import "UIButton+Border.h"
-#import <TTPLLibrary/NSString+Validation.h>
-#import "NSAttributedString+StringWithImage.h"
 #import "SignInApi.h"
 #import "SignUpApi.h"
 #import "UserEntity.h"
 #import "VaultEntity.h"
+#import "AppConstants.h"
 #import "VerifyTokenApi.h"
+#import "QRCodeReader.h"
+#import "UIButton+Border.h"
+#import "PSAppUtilityClass.h"
+#import "UIColor+AppColor.h"
+#import "ForgotPasswordApi.h"
+#import "UITextField+PaddingText.h"
+#import "QRCodeReaderViewController.h"
+#import <TTPLLibrary/NSString+Validation.h>
+#import "NSAttributedString+StringWithImage.h"
 
 static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
 
@@ -82,6 +84,11 @@ static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:kUsernameKey] && [[NSUserDefaults standardUserDefaults] objectForKey:kPasswordKey]) {
+        self.signInPhoneEmailTxtFld.text = [[NSUserDefaults standardUserDefaults] objectForKey:kUsernameKey];
+        self.signInPasswordTxtFld.text = [[NSUserDefaults standardUserDefaults] objectForKey:kPasswordKey];
+        [self verifyToken:[[NSUserDefaults standardUserDefaults] objectForKey:kUsernameKey] andPassword:[[NSUserDefaults standardUserDefaults] objectForKey:kPasswordKey]];
+    }
 }
 
 - (void)setUpViewElements {
@@ -149,37 +156,52 @@ static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
 //        return;
 //    }
     [self setTextViewColors];
-    
-//    __weak PSLoginViewController *weakSelf = self;
+    [PSAppUtilityClass showLoaderOnView:self.view];
+
+    __weak PSLoginViewController *weakSelf = self;
     SignUpApi *signUpApi = [SignUpApi new];
     signUpApi.username = self.signUpFullNameTxtFld.text;
     signUpApi.password = self.signUpPasswordTxtFld.text;
     signUpApi.email = self.signUpEmailTxtFld.text;
     signUpApi.phoneNumber = self.signUpPhoneNoTxtFld.text;
     [[APIManager sharedInstance]makeAPIRequestWithObject:signUpApi shouldAddOAuthHeader:NO andCompletionBlock:^(NSDictionary *responseDictionary, NSError *error) {
+        NSLog(@"Response = %@", responseDictionary);
+        [PSAppUtilityClass hideLoaderFromView:weakSelf.view];
         if (!error) {
-            userEmailOrMobileName = self.signUpEmailTxtFld.text;
-            self.otpContainerView.hidden = NO;
-            [self.otpTextField becomeFirstResponder];
+            userEmailOrMobileName = weakSelf.signUpPhoneNoTxtFld.text;
+            weakSelf.otpContainerView.hidden = NO;
+            [weakSelf.otpTextField becomeFirstResponder];
         }else{
         }
     }];
 }
 
 - (void)verifyToken:(NSString *)userName andPassword:(NSString *)password {
+    __weak PSLoginViewController *weakSelf = self;
+    [PSAppUtilityClass showLoaderOnView:self.view];
     VerifyTokenApi *verifyTokenApi = [VerifyTokenApi new];
     verifyTokenApi.username = userName;
     verifyTokenApi.password = password;
     self.otpTextField.text = @"";
+
     [[APIManager sharedInstance]makeAPIRequestWithObject:verifyTokenApi shouldAddOAuthHeader:NO andCompletionBlock:^(NSDictionary *responseDictionary, NSError *error) {
+        [PSAppUtilityClass hideLoaderFromView:weakSelf.view];
         if (!error) {
+            if (self.signInPhoneEmailTxtFld.text.length) {
+                [[NSUserDefaults standardUserDefaults] setObject:self.signInPhoneEmailTxtFld.text forKey:kUsernameKey];
+                [[NSUserDefaults standardUserDefaults] setObject:self.signInPasswordTxtFld.text forKey:kPasswordKey];
+            }else{
+                [[NSUserDefaults standardUserDefaults] setObject:self.signUpEmailTxtFld.text forKey:kUsernameKey];
+                [[NSUserDefaults standardUserDefaults] setObject:self.signUpPasswordTxtFld.text forKey:kPasswordKey];
+            }
+            [self performSegueWithIdentifier:kHomeScreenViewSegueIdentifier sender:nil];
         }else{
         }
     }];
 }
 
 - (IBAction)forgotPasswordButtonClicked:(id)sender {
-//    [self presentViewController:vc animated:YES completion:NULL];
+    __weak PSLoginViewController *weakSelf = self;
     self.signInButton.hidden = YES;
     self.backToLoginButton.hidden = NO;
     self.backToLoginLabel.hidden = NO;
@@ -187,26 +209,23 @@ static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
     self.signInPasswordTxtFld.hidden = YES;
     self.forgotPasswordButton.hidden = YES;
     self.signUpSignInTopButtonsContainerView.hidden = YES;
+    [PSAppUtilityClass showLoaderOnView:self.view];
+    ForgotPasswordApi *forgotPasswordApi = [ForgotPasswordApi new];
+    forgotPasswordApi.userName = self.signInPhoneEmailTxtFld.text;
+    [[APIManager sharedInstance]makeAPIRequestWithObject:forgotPasswordApi shouldAddOAuthHeader:NO andCompletionBlock:^(NSDictionary *responseDictionary, NSError *error) {
+        [PSAppUtilityClass hideLoaderFromView:weakSelf.view];
+        if (!error) {
+        }else{
+        }
+    }];
+
 }
 
 - (IBAction)loginButtonClicked:(id)sender {
     if ([self.signInPhoneEmailTxtFld.text isValidEmail]) {
         ;
     }
-//    __weak PSLoginViewController *weakSelf = self;
-    SignInApi *signInApi = [SignInApi new];
-    signInApi.username = self.signInPhoneEmailTxtFld.text;
-    signInApi.password = self.signInPasswordTxtFld.text;
-    signInApi.grantType = self.signInPasswordTxtFld.text;
-    [[APIManager sharedInstance]makeAPIRequestWithObject:signInApi shouldAddOAuthHeader:NO andCompletionBlock:^(NSDictionary *responseDictionary, NSError *error) {
-        if (!error) {
-
-        }else{
-        }
-    }];
-
-    
-    [self performSegueWithIdentifier:kHomeScreenViewSegueIdentifier sender:self];
+    [self verifyToken:self.signInPhoneEmailTxtFld.text andPassword:self.signInPasswordTxtFld.text];
 }
 
 - (IBAction)verifyOTPButtonClicked:(id)sender {
@@ -231,6 +250,7 @@ static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
         NSLog(@"Resend clicked");
     }else if([textView isEqual:self.changeNumberTextView]){
         NSLog(@"Change number text View link clicked");
+        [self backToLoginButtonClicked:nil];
     }
     return YES;
 }

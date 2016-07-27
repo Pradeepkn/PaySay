@@ -36,6 +36,10 @@
 }
 
 - (void)parseAPIResponse:(NSDictionary *)responseDictionary{
+    NSString *access_Token = responseDictionary[@"access_token"]?:@"";
+    NSString *token_Type = responseDictionary[@"token_type"]?:@"";
+    NSString *accessTokenKey = [NSString stringWithFormat:@"%@%@", token_Type, access_Token];
+    [[NSUserDefaults standardUserDefaults] setObject:accessTokenKey forKey:@"AccessTokenKey"];
 }
 
 @end
