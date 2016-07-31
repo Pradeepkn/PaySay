@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '11FFD287E0DB0A47B4078D85'
+               BlueprintIdentifier = '32D76B1CD2E2F181164E94CE'
                BlueprintName = 'TTPLLibrary-TTPLLibrary'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'TTPLLibrary.bundle'>

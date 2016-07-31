@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8C940FF56D96E4DDA79E8AAE'
+               BlueprintIdentifier = '4E55A00294CB644568562BC2'
                BlueprintName = 'TTPLAPIManager'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libTTPLAPIManager.a'>

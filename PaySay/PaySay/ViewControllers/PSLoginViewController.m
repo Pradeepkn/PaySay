@@ -19,14 +19,12 @@
 #import "UIColor+AppColor.h"
 #import "ForgotPasswordApi.h"
 #import "UITextField+PaddingText.h"
-#import "QRCodeReaderViewController.h"
 #import <TTPLLibrary/NSString+Validation.h>
 #import "NSAttributedString+StringWithImage.h"
 
 static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
 
-@interface PSLoginViewController ()<QRCodeReaderDelegate> {
-    QRCodeReaderViewController *vc;
+@interface PSLoginViewController () {
     NSString *userEmailOrMobileName;
 }
 
@@ -77,7 +75,6 @@ static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self topSignUpButtonClicked:nil];
-    [self setUpQRCodeScanner];
     [self setUpViewElements];
 }
 
@@ -104,25 +101,6 @@ static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
     [self.signInButton setBackgroundColor:[UIColor appPrimaryBlueColorButton]];
     [self.signUpButton setBackgroundColor:[UIColor appPrimaryBlueColorButton]];
     [self.backToLoginButton setBackgroundColor:[UIColor appPrimaryBlueColorButton]];
-}
-
-- (void)setUpQRCodeScanner {
-    // Create the reader object
-    QRCodeReader *reader = [QRCodeReader readerWithMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
-    
-    // Instantiate the view controller
-    vc = [QRCodeReaderViewController readerWithCancelButtonTitle:@"Cancel" codeReader:reader startScanningAtLoad:YES showSwitchCameraButton:YES showTorchButton:YES];
-    
-    // Set the presentation style
-    vc.modalPresentationStyle = UIModalPresentationFormSheet;
-    
-    // Or use blocks
-    [reader setCompletionWithBlock:^(NSString *resultAsString) {
-        NSLog(@"%@", resultAsString);
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-            [vc dismissViewControllerAnimated:YES completion:NULL];
-        });
-    }];
 }
 
 - (IBAction)topSignUpButtonClicked:(id)sender {
@@ -282,18 +260,6 @@ static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
     self.otpTextField.text = @"";
     [self.otpTextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     self.numberOfDigit = 4.0f;
-}
-
-- (void)reader:(QRCodeReaderViewController *)reader didScanResult:(NSString *)result
-{
-    [self dismissViewControllerAnimated:YES completion:^{
-        NSLog(@"%@", result);
-    }];
-}
-
-- (void)readerDidCancel:(QRCodeReaderViewController *)reader
-{
-    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {

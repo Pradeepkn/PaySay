@@ -12,6 +12,8 @@
 #import "AppConstants.h"
 
 static NSString *kMyExpensesCellIdentifier = @"MyExpensesCellIdentifier";
+static NSString *kPayMerchantSegueIdentifier = @"PayMerchantSegue";
+static NSString *kPayBillSegueIdentifier = @"PayBillSegue";
 
 @interface PSHomeViewController ()
 
@@ -111,9 +113,11 @@ static NSString *kMyExpensesCellIdentifier = @"MyExpensesCellIdentifier";
 }
 
 - (IBAction)payBillButtonClicked:(id)sender {
+    [self performSegueWithIdentifier:kPayBillSegueIdentifier sender:self];
 }
 
 - (IBAction)payMerchantButtonClicked:(id)sender {
+    [self performSegueWithIdentifier:kPayMerchantSegueIdentifier sender:self];
 }
 
 - (void)didReceiveMemoryWarning {

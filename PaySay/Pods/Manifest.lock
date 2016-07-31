@@ -21,7 +21,7 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - BLMultiColorLoader (0.1.6)
-  - IQKeyboardManager (4.0.3)
+  - IQKeyboardManager (4.0.4)
   - QRCodeReaderViewController (4.0.1)
   - TTPLAPIManager (0.1.1):
     - AFNetworking (~> 2.4)
@@ -55,7 +55,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   BLMultiColorLoader: 9208e4541a88ec12e0da5af0e3619a805ab7ff6e
-  IQKeyboardManager: be9695ffc5a52077deb4847608f338771022d6d1
+  IQKeyboardManager: 4a6f83b540283c2645aaeba2bd8dc0f09b5c77f8
   QRCodeReaderViewController: 6538745c8f4ffa9407a26bd7f9489ea01739e7b0
   TTPLAPIManager: a2360fad848ae9dcb05056292cf0d479e325264c
   TTPLLibrary: d88a85ad87aab8929b1da53382d092f75ad3d365

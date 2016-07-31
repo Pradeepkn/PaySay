@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '261DFA158587FE4D058E09B4'
+               BlueprintIdentifier = '17198AEAE7E941DAA41F17D4'
                BlueprintName = 'BLMultiColorLoader-BLMultiColorLoader'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'BLMultiColorLoader.bundle'>

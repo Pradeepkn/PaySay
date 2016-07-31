@@ -19,11 +19,11 @@
 }
 
 - (NSString *)urlForAPIRequest{
-    return [NSString stringWithFormat:@"%@/u/forgot?%@=%@",[super baseURL], kUsernameKey, self.userName];
+    return [NSString stringWithFormat:@"%@/u/forgot/?%@=%@",[super baseURL], kUsernameKey, self.userName];
 }
 
 - (NSMutableDictionary *)requestParameters{
-    return [NSMutableDictionary dictionaryWithObjects:@[self.userName] forKeys:@[kUsernameKey]];
+    return nil;//[NSMutableDictionary dictionaryWithObjects:@[self.userName] forKeys:@[kUsernameKey]];
 }
 
 - (NSString *)requestType{

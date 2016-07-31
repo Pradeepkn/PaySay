@@ -37,4 +37,6 @@ static NSString *const kNameKey = @"name";
 
 static NSString *const kRegistraionId = @"registration_id";
 
+static NSString *const kOtp = @"otp";
+
 #endif /* AppConstants_h */

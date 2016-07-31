@@ -11,12 +11,18 @@
 		E907D2881D2EACEF0074845E /* VerifyTokenApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D2871D2EACEF0074845E /* VerifyTokenApi.m */; };
 		E907D28B1D2EAEA60074845E /* RegisterDeviceTokenApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D28A1D2EAEA60074845E /* RegisterDeviceTokenApi.m */; };
 		E90FC1551D49312700AD4D36 /* PSAppUtilityClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FC1541D49312600AD4D36 /* PSAppUtilityClass.m */; };
+		E9225C071D4E24780093B814 /* ResetPasswordApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E9225C061D4E24780093B814 /* ResetPasswordApi.m */; };
+		E9225C0A1D4E249B0093B814 /* ResendEmailVerificationApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E9225C091D4E249B0093B814 /* ResendEmailVerificationApi.m */; };
+		E9225C0D1D4E24D40093B814 /* CreateMerchatPayCodeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E9225C0C1D4E24D40093B814 /* CreateMerchatPayCodeApi.m */; };
+		E9225C101D4E87460093B814 /* PSPayBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9225C0F1D4E87460093B814 /* PSPayBillViewController.m */; };
+		E9225C131D4E8FD70093B814 /* PSBillTypeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9225C121D4E8FD70093B814 /* PSBillTypeCollectionViewCell.m */; };
 		E92318131D15546B009233B9 /* PSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92318121D15546B009233B9 /* PSHomeViewController.m */; };
 		E92318171D15E284009233B9 /* MyExpensesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E92318161D15E284009233B9 /* MyExpensesTableViewCell.m */; };
 		E97D73F21D22496200ADF98E /* UserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E97D73F11D22496200ADF98E /* UserEntity.m */; };
 		E97D73F51D22504200ADF98E /* VaultEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E97D73F41D22504200ADF98E /* VaultEntity.m */; };
 		E97D73F91D22540800ADF98E /* SignInApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E97D73F81D22540800ADF98E /* SignInApi.m */; };
 		E97D74001D225AA900ADF98E /* SignUpApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E97D73FF1D225AA900ADF98E /* SignUpApi.m */; };
+		E9B227181D4CD5D900453BCF /* PSPayMerchantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B227171D4CD5D900453BCF /* PSPayMerchantViewController.m */; };
 		E9BF093E1D49480600291DA8 /* ForgotPasswordApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BF093D1D49480600291DA8 /* ForgotPasswordApi.m */; };
 		E9D546471D1538FE00504DAD /* Multicolore.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9D546461D1538FE00504DAD /* Multicolore.otf */; };
 		E9D5464C1D15391F00504DAD /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9D546481D15391F00504DAD /* Montserrat-Bold.otf */; };
@@ -46,6 +52,16 @@
 		E907D28A1D2EAEA60074845E /* RegisterDeviceTokenApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterDeviceTokenApi.m; sourceTree = "<group>"; };
 		E90FC1531D49312600AD4D36 /* PSAppUtilityClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSAppUtilityClass.h; sourceTree = "<group>"; };
 		E90FC1541D49312600AD4D36 /* PSAppUtilityClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSAppUtilityClass.m; sourceTree = "<group>"; };
+		E9225C051D4E24780093B814 /* ResetPasswordApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordApi.h; sourceTree = "<group>"; };
+		E9225C061D4E24780093B814 /* ResetPasswordApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordApi.m; sourceTree = "<group>"; };
+		E9225C081D4E249B0093B814 /* ResendEmailVerificationApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResendEmailVerificationApi.h; sourceTree = "<group>"; };
+		E9225C091D4E249B0093B814 /* ResendEmailVerificationApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResendEmailVerificationApi.m; sourceTree = "<group>"; };
+		E9225C0B1D4E24D40093B814 /* CreateMerchatPayCodeApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateMerchatPayCodeApi.h; sourceTree = "<group>"; };
+		E9225C0C1D4E24D40093B814 /* CreateMerchatPayCodeApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateMerchatPayCodeApi.m; sourceTree = "<group>"; };
+		E9225C0E1D4E87460093B814 /* PSPayBillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPayBillViewController.h; sourceTree = "<group>"; };
+		E9225C0F1D4E87460093B814 /* PSPayBillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPayBillViewController.m; sourceTree = "<group>"; };
+		E9225C111D4E8FD70093B814 /* PSBillTypeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSBillTypeCollectionViewCell.h; sourceTree = "<group>"; };
+		E9225C121D4E8FD70093B814 /* PSBillTypeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSBillTypeCollectionViewCell.m; sourceTree = "<group>"; };
 		E92318111D15546B009233B9 /* PSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSHomeViewController.h; sourceTree = "<group>"; };
 		E92318121D15546B009233B9 /* PSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSHomeViewController.m; sourceTree = "<group>"; };
 		E92318151D15E284009233B9 /* MyExpensesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyExpensesTableViewCell.h; sourceTree = "<group>"; };
@@ -59,6 +75,8 @@
 		E97D73FD1D22586900ADF98E /* ApiKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiKeys.h; sourceTree = "<group>"; };
 		E97D73FE1D225AA900ADF98E /* SignUpApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpApi.h; sourceTree = "<group>"; };
 		E97D73FF1D225AA900ADF98E /* SignUpApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpApi.m; sourceTree = "<group>"; };
+		E9B227161D4CD5D900453BCF /* PSPayMerchantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPayMerchantViewController.h; sourceTree = "<group>"; };
+		E9B227171D4CD5D900453BCF /* PSPayMerchantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPayMerchantViewController.m; sourceTree = "<group>"; };
 		E9BF093C1D49480600291DA8 /* ForgotPasswordApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordApi.h; sourceTree = "<group>"; };
 		E9BF093D1D49480600291DA8 /* ForgotPasswordApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordApi.m; sourceTree = "<group>"; };
 		E9D546461D1538FE00504DAD /* Multicolore.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Multicolore.otf; sourceTree = "<group>"; };
@@ -123,6 +141,8 @@
 			children = (
 				E92318151D15E284009233B9 /* MyExpensesTableViewCell.h */,
 				E92318161D15E284009233B9 /* MyExpensesTableViewCell.m */,
+				E9225C111D4E8FD70093B814 /* PSBillTypeCollectionViewCell.h */,
+				E9225C121D4E8FD70093B814 /* PSBillTypeCollectionViewCell.m */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -151,6 +171,12 @@
 				E907D28A1D2EAEA60074845E /* RegisterDeviceTokenApi.m */,
 				E9BF093C1D49480600291DA8 /* ForgotPasswordApi.h */,
 				E9BF093D1D49480600291DA8 /* ForgotPasswordApi.m */,
+				E9225C051D4E24780093B814 /* ResetPasswordApi.h */,
+				E9225C061D4E24780093B814 /* ResetPasswordApi.m */,
+				E9225C081D4E249B0093B814 /* ResendEmailVerificationApi.h */,
+				E9225C091D4E249B0093B814 /* ResendEmailVerificationApi.m */,
+				E9225C0B1D4E24D40093B814 /* CreateMerchatPayCodeApi.h */,
+				E9225C0C1D4E24D40093B814 /* CreateMerchatPayCodeApi.m */,
 			);
 			path = ApiObjects;
 			sourceTree = "<group>";
@@ -273,6 +299,10 @@
 				E9FD29DB1D0412CE0099373D /* PSLoginViewController.m */,
 				E92318111D15546B009233B9 /* PSHomeViewController.h */,
 				E92318121D15546B009233B9 /* PSHomeViewController.m */,
+				E9B227161D4CD5D900453BCF /* PSPayMerchantViewController.h */,
+				E9B227171D4CD5D900453BCF /* PSPayMerchantViewController.m */,
+				E9225C0E1D4E87460093B814 /* PSPayBillViewController.h */,
+				E9225C0F1D4E87460093B814 /* PSPayBillViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -404,22 +434,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				E97D74001D225AA900ADF98E /* SignUpApi.m in Sources */,
+				E9225C071D4E24780093B814 /* ResetPasswordApi.m in Sources */,
 				E9FD29C31D040DF50099373D /* PaySay.xcdatamodeld in Sources */,
 				E97D73F51D22504200ADF98E /* VaultEntity.m in Sources */,
 				E907D28B1D2EAEA60074845E /* RegisterDeviceTokenApi.m in Sources */,
 				E9BF093E1D49480600291DA8 /* ForgotPasswordApi.m in Sources */,
 				E9D5465E1D15478F00504DAD /* UIButton+Border.m in Sources */,
 				E97D73F21D22496200ADF98E /* UserEntity.m in Sources */,
+				E9225C0A1D4E249B0093B814 /* ResendEmailVerificationApi.m in Sources */,
 				E92318171D15E284009233B9 /* MyExpensesTableViewCell.m in Sources */,
 				E97D73F91D22540800ADF98E /* SignInApi.m in Sources */,
+				E9225C0D1D4E24D40093B814 /* CreateMerchatPayCodeApi.m in Sources */,
 				E92318131D15546B009233B9 /* PSHomeViewController.m in Sources */,
+				E9225C101D4E87460093B814 /* PSPayBillViewController.m in Sources */,
 				E9D546601D15478F00504DAD /* UITextField+PaddingText.m in Sources */,
 				E9D5465D1D15478F00504DAD /* NSAttributedString+StringWithImage.m in Sources */,
+				E9225C131D4E8FD70093B814 /* PSBillTypeCollectionViewCell.m in Sources */,
 				E9FD29DC1D0412CE0099373D /* PSLoginViewController.m in Sources */,
 				E90FC1551D49312700AD4D36 /* PSAppUtilityClass.m in Sources */,
 				E907D2881D2EACEF0074845E /* VerifyTokenApi.m in Sources */,
 				E9FD29B71D040DF50099373D /* main.m in Sources */,
 				E9D5465F1D15478F00504DAD /* UIColor+AppColor.m in Sources */,
+				E9B227181D4CD5D900453BCF /* PSPayMerchantViewController.m in Sources */,
 				E9FD29D51D04120A0099373D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

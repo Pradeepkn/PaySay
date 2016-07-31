@@ -21,4 +21,16 @@
 
 + (void)hideLoaderFromView:(UIView *)view;
 
++ (void)storeUserName:(NSString *)userName;
+
++ (void)storeUserEmail:(NSString *)userEmail;
+
++ (void)storeUserPhoneNumber:(NSString*)userPhoneNumber;
+
++ (NSString *)getUserName;
+
++ (NSString *)getUserEmail;
+
++ (NSString *)getUserPhoneNUmber;
+
 @end

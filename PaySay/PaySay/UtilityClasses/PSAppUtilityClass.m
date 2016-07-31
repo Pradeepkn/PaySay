@@ -8,6 +8,7 @@
 
 #import "PSAppUtilityClass.h"
 #import "BLMultiColorLoader.h"
+#import "AppConstants.h"
 
 @implementation PSAppUtilityClass
 
@@ -51,6 +52,30 @@
         [[PSAppUtilityClass sharedInstance].multiColorLoader setHidden:YES];
         [view willRemoveSubview:[PSAppUtilityClass sharedInstance].multiColorLoader];
     });
+}
+
++ (void)storeUserName:(NSString *)userName {
+    [[NSUserDefaults standardUserDefaults] setObject:userName forKey:kUsernameKey];
+}
+
++ (void)storeUserEmail:(NSString *)userEmail {
+    [[NSUserDefaults standardUserDefaults] setObject:userEmail forKey:kEmailKey];
+}
+
++ (void)storeUserPhoneNumber:(NSString*)userPhoneNumber {
+    [[NSUserDefaults standardUserDefaults] setObject:userPhoneNumber forKey:kPhoneNumberKey];
+}
+
++ (NSString *)getUserName {
+    return [[NSUserDefaults standardUserDefaults] objectForKey:kUsernameKey];
+}
+
++ (NSString *)getUserEmail {
+    return [[NSUserDefaults standardUserDefaults] objectForKey:kEmailKey];
+}
+
++ (NSString *)getUserPhoneNUmber {
+    return [[NSUserDefaults standardUserDefaults] objectForKey:kPhoneNumberKey];
 }
 
 @end
