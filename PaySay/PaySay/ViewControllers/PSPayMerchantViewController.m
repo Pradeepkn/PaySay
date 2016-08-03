@@ -8,6 +8,8 @@
 
 #import "PSPayMerchantViewController.h"
 #import "QRCodeReaderViewController.h"
+#import "PSAppUtilityClass.h"
+#import "CreateMerchatPayCodeApi.h"
 
 @interface PSPayMerchantViewController ()<QRCodeReaderDelegate>{
     QRCodeReaderViewController *vc;
@@ -28,6 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.emailTextField.text = [PSAppUtilityClass getUserEmail];
     // Do any additional setup after loading the view.
 }
 
@@ -44,7 +47,12 @@
     // Or use blocks
     [reader setCompletionWithBlock:^(NSString *resultAsString) {
         NSLog(@"%@", resultAsString);
-        self.merchantCodeTxtField.text = resultAsString;
+        NSArray *qrCodeElements = [resultAsString componentsSeparatedByString:@"/"];
+        NSString *finalString = [qrCodeElements objectAtIndex:qrCodeElements.count - 1];
+        if ([finalString isEqualToString:@""] || finalString.length < 1) {
+            finalString = [qrCodeElements objectAtIndex:qrCodeElements.count - 2];
+        }
+        self.merchantCodeTxtField.text = finalString;
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
             [vc dismissViewControllerAnimated:YES completion:NULL];
         });
@@ -63,7 +71,21 @@
 }
 
 - (IBAction)proceedToPayButtonClicked:(id)sender {
+    __weak PSPayMerchantViewController *weakSelf = self;
+    [PSAppUtilityClass showLoaderOnView:self.view];
+    CreateMerchatPayCodeApi *createMerchatPayCodeApiObject = [CreateMerchatPayCodeApi new];
+    createMerchatPayCodeApiObject.amount = self.amountTextField.text;
+    createMerchatPayCodeApiObject.payCode = self.merchantCodeTxtField.text;
+    createMerchatPayCodeApiObject.contact = self.phoneNumberTextField.text;
+    createMerchatPayCodeApiObject.email = self.emailTextField.text;
+    createMerchatPayCodeApiObject.billNumber = self.billNumberTextField.text;
     
+    [[APIManager sharedInstance]makeAPIRequestWithObject:createMerchatPayCodeApiObject shouldAddOAuthHeader:NO andCompletionBlock:^(NSDictionary *responseDictionary, NSError *error) {
+        [PSAppUtilityClass hideLoaderFromView:weakSelf.view];
+        if (!error) {
+        }else{
+        }
+    }];
 }
 
 - (void)reader:(QRCodeReaderViewController *)reader didScanResult:(NSString *)result

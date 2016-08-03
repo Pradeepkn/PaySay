@@ -19,7 +19,17 @@
 }
 
 - (NSString *)urlForAPIRequest{
-    return [NSString stringWithFormat:@"%@/u/forgot/?%@=%@",[super baseURL], kUsernameKey, self.userName];
+    if ([self isAllDigits]) {
+        return [NSString stringWithFormat:@"%@/v2/u/forgot/?%@=%@",[super baseURL], kPhoneNumberKey, self.userName];
+    }
+    return [NSString stringWithFormat:@"%@/v2/u/forgot/?%@=%@",[super baseURL], kEmailKey, self.userName];
+}
+
+- (BOOL) isAllDigits
+{
+    NSCharacterSet* nonNumbers = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+    NSRange r = [self.userName rangeOfCharacterFromSet: nonNumbers];
+    return r.location == NSNotFound && self.userName.length > 0;
 }
 
 - (NSMutableDictionary *)requestParameters{

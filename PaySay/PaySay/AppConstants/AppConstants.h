@@ -39,4 +39,11 @@ static NSString *const kRegistraionId = @"registration_id";
 
 static NSString *const kOtp = @"otp";
 
+static NSString *const kAmountKey = @"amount";
+static NSString *const kBillNumberKey = @"bill_number";
+static NSString *const kBasketKey = @"basket";
+static NSString *const kUseRewardsKey = @"use_rewards";
+
+
+
 #endif /* AppConstants_h */

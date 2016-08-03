@@ -1090,7 +1090,6 @@ You have paid $100</string>
         <!--Navigation Controller-->
         <scene sceneID="E3j-lx-CE8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jc2-J6-fEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P3V-l6-47z" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Zeq-IV-Tns">
@@ -1104,6 +1103,7 @@ You have paid $100</string>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FCB-91-RgW"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jc2-J6-fEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="209" y="247"/>
         </scene>

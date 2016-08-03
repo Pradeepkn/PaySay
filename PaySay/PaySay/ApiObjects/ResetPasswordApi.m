@@ -19,7 +19,7 @@
 }
 
 - (NSString *)urlForAPIRequest{
-    return [NSString stringWithFormat:@"%@/u/reset/",[super baseURL]];
+    return [NSString stringWithFormat:@"%@/v2/u/reset/",[super baseURL]];
 }
 
 - (NSMutableDictionary *)requestParameters{

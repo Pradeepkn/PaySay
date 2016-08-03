@@ -19,7 +19,7 @@
 }
 
 - (NSString *)urlForAPIRequest{
-    return [NSString stringWithFormat:@"%@/device/",[super baseURL]];
+    return [NSString stringWithFormat:@"%@/v2/u/device/",[super baseURL]];
 }
 
 - (NSMutableDictionary *)requestParameters{

@@ -19,7 +19,7 @@
 }
 
 - (NSString *)urlForAPIRequest{
-    return [NSString stringWithFormat:@"%@/u/resend_emailverification/",[super baseURL]];
+    return [NSString stringWithFormat:@"%@/v2/u/resend_emailverification/",[super baseURL]];
 }
 
 - (NSMutableDictionary *)requestParameters{

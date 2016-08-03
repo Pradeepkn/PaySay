@@ -166,9 +166,11 @@ static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
         [PSAppUtilityClass hideLoaderFromView:weakSelf.view];
         if (!error) {
             if (self.signInPhoneEmailTxtFld.text.length) {
+                [PSAppUtilityClass storeUserEmail:self.signInPhoneEmailTxtFld.text];
                 [[NSUserDefaults standardUserDefaults] setObject:self.signInPhoneEmailTxtFld.text forKey:kUsernameKey];
                 [[NSUserDefaults standardUserDefaults] setObject:self.signInPasswordTxtFld.text forKey:kPasswordKey];
             }else{
+                [PSAppUtilityClass storeUserEmail:self.signUpEmailTxtFld.text];
                 [[NSUserDefaults standardUserDefaults] setObject:self.signUpEmailTxtFld.text forKey:kUsernameKey];
                 [[NSUserDefaults standardUserDefaults] setObject:self.signUpPasswordTxtFld.text forKey:kPasswordKey];
             }
