@@ -82,7 +82,7 @@ static NSString *kPayBillSegueIdentifier = @"PayBillSegue";
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *view = [UIView new];
-    view.backgroundColor = [UIColor clearColor];
+    view.backgroundColor = [UIColor whiteColor];
     self.myExpensesTableView.backgroundColor = [UIColor whiteColor];
     UILabel *myExpensesHeaderLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, self.myExpensesTableView.frame.size.width - 30, 30)];
     myExpensesHeaderLabel.text = NSLocalizedString(@"My Expenses", nil);

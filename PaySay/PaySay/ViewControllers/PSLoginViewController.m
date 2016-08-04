@@ -182,23 +182,27 @@ static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
 
 - (IBAction)forgotPasswordButtonClicked:(id)sender {
     __weak PSLoginViewController *weakSelf = self;
-    self.signInButton.hidden = YES;
-    self.backToLoginButton.hidden = NO;
-    self.backToLoginLabel.hidden = NO;
-    self.signInPhoneEmailTxtFld.hidden = YES;
-    self.signInPasswordTxtFld.hidden = YES;
-    self.forgotPasswordButton.hidden = YES;
-    self.signUpSignInTopButtonsContainerView.hidden = YES;
     [PSAppUtilityClass showLoaderOnView:self.view];
     ForgotPasswordApi *forgotPasswordApi = [ForgotPasswordApi new];
     forgotPasswordApi.userName = self.signInPhoneEmailTxtFld.text;
     [[APIManager sharedInstance]makeAPIRequestWithObject:forgotPasswordApi shouldAddOAuthHeader:NO andCompletionBlock:^(NSDictionary *responseDictionary, NSError *error) {
         [PSAppUtilityClass hideLoaderFromView:weakSelf.view];
         if (!error) {
+            userEmailOrMobileName = weakSelf.signInPhoneEmailTxtFld.text;
+            [self setTextViewColors];
+            self.signInContainerView.hidden = YES;
+            weakSelf.otpContainerView.hidden = NO;
+            [weakSelf.otpTextField becomeFirstResponder];
         }else{
+            self.signInButton.hidden = YES;
+            self.backToLoginButton.hidden = NO;
+            self.backToLoginLabel.hidden = NO;
+            self.signInPhoneEmailTxtFld.hidden = YES;
+            self.signInPasswordTxtFld.hidden = YES;
+            self.forgotPasswordButton.hidden = YES;
+            self.signUpSignInTopButtonsContainerView.hidden = YES;
         }
     }];
-
 }
 
 - (IBAction)loginButtonClicked:(id)sender {
@@ -215,12 +219,18 @@ static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
 }
 
 - (IBAction)backToLoginButtonClicked:(id)sender {
+    [self showLoginScreen];
+}
+
+- (void)showLoginScreen {
     self.backToLoginButton.hidden = YES;
     self.backToLoginLabel.hidden = YES;
     self.signInPhoneEmailTxtFld.hidden = NO;
     self.signInPasswordTxtFld.hidden = NO;
     self.forgotPasswordButton.hidden = NO;
     self.signInButton.hidden = NO;
+    self.otpContainerView.hidden = YES;
+    self.signInContainerView.hidden = NO;
     self.signUpSignInTopButtonsContainerView.hidden = NO;
 }
 
@@ -228,6 +238,7 @@ static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
 {
     if ([textView isEqual:self.resendTextView]) {
         NSLog(@"Resend clicked");
+        [self forgotPasswordButtonClicked:nil];
     }else if([textView isEqual:self.changeNumberTextView]){
         NSLog(@"Change number text View link clicked");
         [self backToLoginButtonClicked:nil];
