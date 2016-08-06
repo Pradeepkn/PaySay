@@ -33,38 +33,6 @@
             endingLineNumber = "82"
             landmarkName = "-proceedToPayButtonClicked:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[PSPayMerchantViewController proceedToPayButtonClicked:]"
-                  moduleName = "PaySay"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pradeepnarendra/Documents/Passion/PaySay_Git/PaySay/PaySay/ViewControllers/PSPayMerchantViewController.m"
-                  timestampString = "492039757.576985"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "924">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__57-[PSPayMerchantViewController proceedToPayButtonClicked:]_block_invoke"
-                  moduleName = "PaySay"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pradeepnarendra/Documents/Passion/PaySay_Git/PaySay/PaySay/ViewControllers/PSPayMerchantViewController.m"
-                  timestampString = "492039757.577258"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "88">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -80,22 +48,6 @@
             startingLineNumber = "85"
             endingLineNumber = "85"
             landmarkName = "-proceedToPayButtonClicked:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/TTPLAPIManager/Classes/APIManager.m"
-            timestampString = "492039901.540359"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "-makeAPIRequestWithObject:shouldAddOAuthHeader:andCompletionBlock:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

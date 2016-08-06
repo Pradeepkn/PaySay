@@ -8,8 +8,10 @@
 
 #import "PSPayBillViewController.h"
 #import "PSBillTypeCollectionViewCell.h"
+#import "PSAppUtilityClass.h"
 
 static NSString *const kBillTypeCellIdentifier = @"BillTypeCellIdentifier";
+static NSString *const kPayBillSegueIdentifier  = @"PayBillSegue";
 
 @interface PSPayBillViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *headerLabel;
@@ -77,6 +79,7 @@ static NSString *const kBillTypeCellIdentifier = @"BillTypeCellIdentifier";
 #pragma mark - Collection View deleagete
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:kPayBillSegueIdentifier sender:self];
 }
 
 - (void)didReceiveMemoryWarning {

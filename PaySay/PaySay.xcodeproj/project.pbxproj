@@ -33,6 +33,11 @@
 		E9D5465E1D15478F00504DAD /* UIButton+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D546581D15478F00504DAD /* UIButton+Border.m */; };
 		E9D5465F1D15478F00504DAD /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D5465A1D15478F00504DAD /* UIColor+AppColor.m */; };
 		E9D546601D15478F00504DAD /* UITextField+PaddingText.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D5465C1D15478F00504DAD /* UITextField+PaddingText.m */; };
+		E9F520AB1D565B2500B72464 /* OperatorsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F520AA1D565B2500B72464 /* OperatorsApi.m */; };
+		E9F520AE1D5660D000B72464 /* Operators.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F520AD1D5660D000B72464 /* Operators.m */; };
+		E9F520B11D56664400B72464 /* PSOperatorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F520B01D56664400B72464 /* PSOperatorsViewController.m */; };
+		E9F520B61D567BAE00B72464 /* PaySayAlertModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F520B31D567BAE00B72464 /* PaySayAlertModel.m */; };
+		E9F520B71D567BAE00B72464 /* PaySayAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F520B51D567BAE00B72464 /* PaySayAlertViewController.m */; };
 		E9FD29B71D040DF50099373D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FD29B61D040DF50099373D /* main.m */; };
 		E9FD29C01D040DF50099373D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9FD29BE1D040DF50099373D /* Main.storyboard */; };
 		E9FD29C31D040DF50099373D /* PaySay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9FD29C11D040DF50099373D /* PaySay.xcdatamodeld */; };
@@ -92,6 +97,16 @@
 		E9D5465A1D15478F00504DAD /* UIColor+AppColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AppColor.m"; sourceTree = "<group>"; };
 		E9D5465B1D15478F00504DAD /* UITextField+PaddingText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+PaddingText.h"; sourceTree = "<group>"; };
 		E9D5465C1D15478F00504DAD /* UITextField+PaddingText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PaddingText.m"; sourceTree = "<group>"; };
+		E9F520A91D565B2500B72464 /* OperatorsApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperatorsApi.h; sourceTree = "<group>"; };
+		E9F520AA1D565B2500B72464 /* OperatorsApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperatorsApi.m; sourceTree = "<group>"; };
+		E9F520AC1D5660D000B72464 /* Operators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operators.h; sourceTree = "<group>"; };
+		E9F520AD1D5660D000B72464 /* Operators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Operators.m; sourceTree = "<group>"; };
+		E9F520AF1D56664400B72464 /* PSOperatorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSOperatorsViewController.h; sourceTree = "<group>"; };
+		E9F520B01D56664400B72464 /* PSOperatorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSOperatorsViewController.m; sourceTree = "<group>"; };
+		E9F520B21D567BAE00B72464 /* PaySayAlertModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaySayAlertModel.h; sourceTree = "<group>"; };
+		E9F520B31D567BAE00B72464 /* PaySayAlertModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaySayAlertModel.m; sourceTree = "<group>"; };
+		E9F520B41D567BAE00B72464 /* PaySayAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaySayAlertViewController.h; sourceTree = "<group>"; };
+		E9F520B51D567BAE00B72464 /* PaySayAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaySayAlertViewController.m; sourceTree = "<group>"; };
 		E9FD29B21D040DF50099373D /* PaySay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaySay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9FD29B61D040DF50099373D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E9FD29BF1D040DF50099373D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -154,6 +169,8 @@
 				E97D73F11D22496200ADF98E /* UserEntity.m */,
 				E97D73F31D22504200ADF98E /* VaultEntity.h */,
 				E97D73F41D22504200ADF98E /* VaultEntity.m */,
+				E9F520AC1D5660D000B72464 /* Operators.h */,
+				E9F520AD1D5660D000B72464 /* Operators.m */,
 			);
 			path = APIModels;
 			sourceTree = "<group>";
@@ -177,6 +194,8 @@
 				E9225C091D4E249B0093B814 /* ResendEmailVerificationApi.m */,
 				E9225C0B1D4E24D40093B814 /* CreateMerchatPayCodeApi.h */,
 				E9225C0C1D4E24D40093B814 /* CreateMerchatPayCodeApi.m */,
+				E9F520A91D565B2500B72464 /* OperatorsApi.h */,
+				E9F520AA1D565B2500B72464 /* OperatorsApi.m */,
 			);
 			path = ApiObjects;
 			sourceTree = "<group>";
@@ -303,6 +322,12 @@
 				E9B227171D4CD5D900453BCF /* PSPayMerchantViewController.m */,
 				E9225C0E1D4E87460093B814 /* PSPayBillViewController.h */,
 				E9225C0F1D4E87460093B814 /* PSPayBillViewController.m */,
+				E9F520AF1D56664400B72464 /* PSOperatorsViewController.h */,
+				E9F520B01D56664400B72464 /* PSOperatorsViewController.m */,
+				E9F520B21D567BAE00B72464 /* PaySayAlertModel.h */,
+				E9F520B31D567BAE00B72464 /* PaySayAlertModel.m */,
+				E9F520B41D567BAE00B72464 /* PaySayAlertViewController.h */,
+				E9F520B51D567BAE00B72464 /* PaySayAlertViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -436,12 +461,16 @@
 				E97D74001D225AA900ADF98E /* SignUpApi.m in Sources */,
 				E9225C071D4E24780093B814 /* ResetPasswordApi.m in Sources */,
 				E9FD29C31D040DF50099373D /* PaySay.xcdatamodeld in Sources */,
+				E9F520B71D567BAE00B72464 /* PaySayAlertViewController.m in Sources */,
 				E97D73F51D22504200ADF98E /* VaultEntity.m in Sources */,
 				E907D28B1D2EAEA60074845E /* RegisterDeviceTokenApi.m in Sources */,
 				E9BF093E1D49480600291DA8 /* ForgotPasswordApi.m in Sources */,
 				E9D5465E1D15478F00504DAD /* UIButton+Border.m in Sources */,
+				E9F520AB1D565B2500B72464 /* OperatorsApi.m in Sources */,
+				E9F520AE1D5660D000B72464 /* Operators.m in Sources */,
 				E97D73F21D22496200ADF98E /* UserEntity.m in Sources */,
 				E9225C0A1D4E249B0093B814 /* ResendEmailVerificationApi.m in Sources */,
+				E9F520B11D56664400B72464 /* PSOperatorsViewController.m in Sources */,
 				E92318171D15E284009233B9 /* MyExpensesTableViewCell.m in Sources */,
 				E97D73F91D22540800ADF98E /* SignInApi.m in Sources */,
 				E9225C0D1D4E24D40093B814 /* CreateMerchatPayCodeApi.m in Sources */,
@@ -457,6 +486,7 @@
 				E9D5465F1D15478F00504DAD /* UIColor+AppColor.m in Sources */,
 				E9B227181D4CD5D900453BCF /* PSPayMerchantViewController.m in Sources */,
 				E9FD29D51D04120A0099373D /* AppDelegate.m in Sources */,
+				E9F520B61D567BAE00B72464 /* PaySayAlertModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

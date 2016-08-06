@@ -35,6 +35,11 @@
             <string>Montserrat-Regular</string>
             <string>Montserrat-Regular</string>
             <string>Montserrat-Regular</string>
+            <string>Montserrat-Regular</string>
+            <string>Montserrat-Regular</string>
+            <string>Montserrat-Regular</string>
+            <string>Montserrat-Regular</string>
+            <string>Montserrat-Regular</string>
         </mutableArray>
         <mutableArray key="Montserrat-SemiBold.otf">
             <string>Montserrat-SemiBold</string>
@@ -1081,11 +1086,202 @@ You have paid $100</string>
                     <connections>
                         <outlet property="billTypeCollectionView" destination="Kh7-Zv-swe" id="6Xw-SN-0b6"/>
                         <outlet property="headerLabel" destination="fbf-WU-H5i" id="qCV-zi-hHe"/>
+                        <segue destination="9qy-la-Xb1" kind="show" identifier="PayBillSegue" id="yY5-y9-nna"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1u-hR-vcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2504" y="679"/>
+        </scene>
+        <!--PAY BILLS-->
+        <scene sceneID="BkS-69-mSz">
+            <objects>
+                <viewController id="9qy-la-Xb1" customClass="PSOperatorsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ez5-1u-aGp"/>
+                        <viewControllerLayoutGuide type="bottom" id="oY9-fJ-2YH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BfB-ba-bTt" customClass="IQPreviousNextView">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ylb-dN-VX2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="220"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJS-lQ-zFS">
+                                        <rect key="frame" x="220" y="156" width="160" height="40"/>
+                                        <color key="backgroundColor" red="0.25098039220000001" green="0.67843137249999996" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1vV-K7-bke"/>
+                                            <constraint firstAttribute="width" constant="160" id="im0-kv-H7u"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                        <state key="normal" title="Recharge">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rechargeButtonClicked:" destination="9qy-la-Xb1" eventType="touchUpInside" id="Oj0-5e-Tnh"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1K-Ng-Iir">
+                                        <rect key="frame" x="10" y="10" width="580" height="36"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Operator" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="clf-yF-f8M">
+                                                <rect key="frame" x="37" y="0.0" width="543" height="36"/>
+                                                <color key="backgroundColor" red="0.91372549020000005" green="0.92549019610000005" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="lRR-pB-qTr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="9qy-la-Xb1" id="47c-av-IYJ"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gi5-bY-Qq4">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                <color key="backgroundColor" red="0.91372549020000005" green="0.92549019610000005" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="5jc-P6-p1h"/>
+                                                    <constraint firstAttribute="width" constant="36" id="ooZ-HZ-60v"/>
+                                                </constraints>
+                                                <state key="normal" image="dth"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTP-io-6nX">
+                                                <rect key="frame" x="37" y="0.0" width="543" height="36"/>
+                                                <connections>
+                                                    <action selector="chooseOperatorButtonClicked:" destination="9qy-la-Xb1" eventType="touchUpInside" id="D99-Up-V9X"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.7725490196" green="0.78823529410000004" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="Gi5-bY-Qq4" firstAttribute="top" secondItem="t1K-Ng-Iir" secondAttribute="top" id="2YO-23-o7D"/>
+                                            <constraint firstAttribute="height" constant="36" id="4Qi-hb-ynu"/>
+                                            <constraint firstAttribute="trailing" secondItem="clf-yF-f8M" secondAttribute="trailing" id="C6U-OQ-iJJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="uTP-io-6nX" secondAttribute="trailing" id="EKp-jz-2vu"/>
+                                            <constraint firstItem="clf-yF-f8M" firstAttribute="top" secondItem="t1K-Ng-Iir" secondAttribute="top" id="Et3-pP-VNy"/>
+                                            <constraint firstItem="uTP-io-6nX" firstAttribute="top" secondItem="t1K-Ng-Iir" secondAttribute="top" id="GVs-K7-J58"/>
+                                            <constraint firstItem="Gi5-bY-Qq4" firstAttribute="leading" secondItem="t1K-Ng-Iir" secondAttribute="leading" id="Oiu-ZT-hvp"/>
+                                            <constraint firstItem="clf-yF-f8M" firstAttribute="leading" secondItem="Gi5-bY-Qq4" secondAttribute="trailing" constant="1" id="dPO-QX-h9L"/>
+                                            <constraint firstItem="uTP-io-6nX" firstAttribute="leading" secondItem="Gi5-bY-Qq4" secondAttribute="trailing" constant="1" id="gmE-cK-Fob"/>
+                                            <constraint firstAttribute="bottom" secondItem="clf-yF-f8M" secondAttribute="bottom" id="o6J-NE-fIi"/>
+                                            <constraint firstAttribute="bottom" secondItem="uTP-io-6nX" secondAttribute="bottom" id="vwL-ry-GJ3"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPM-Uk-UCa">
+                                        <rect key="frame" x="10" y="56" width="580" height="36"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u0e-LK-zch">
+                                                <rect key="frame" x="37" y="0.0" width="543" height="36"/>
+                                                <color key="backgroundColor" red="0.91372549020000005" green="0.92549019610000005" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="93z-kK-Yxo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="9qy-la-Xb1" id="nVf-yA-e5N"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hr4-NG-os5">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                <color key="backgroundColor" red="0.91372549020000005" green="0.92549019610000005" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="DbG-Zw-gQH"/>
+                                                    <constraint firstAttribute="width" constant="36" id="gd1-a1-CpC"/>
+                                                </constraints>
+                                                <state key="normal" image="mobile"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.7725490196" green="0.78823529410000004" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="7XA-FQ-JtH"/>
+                                            <constraint firstItem="hr4-NG-os5" firstAttribute="top" secondItem="IPM-Uk-UCa" secondAttribute="top" id="CuR-D9-v2q"/>
+                                            <constraint firstAttribute="trailing" secondItem="u0e-LK-zch" secondAttribute="trailing" id="DcY-Cp-Poi"/>
+                                            <constraint firstAttribute="bottom" secondItem="u0e-LK-zch" secondAttribute="bottom" id="Df2-IT-hyg"/>
+                                            <constraint firstItem="u0e-LK-zch" firstAttribute="leading" secondItem="hr4-NG-os5" secondAttribute="trailing" constant="1" id="Imx-o6-atr"/>
+                                            <constraint firstItem="hr4-NG-os5" firstAttribute="leading" secondItem="IPM-Uk-UCa" secondAttribute="leading" id="UC1-BS-QNv"/>
+                                            <constraint firstItem="u0e-LK-zch" firstAttribute="top" secondItem="IPM-Uk-UCa" secondAttribute="top" id="gjG-zs-DUU"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j23-NK-6Xa">
+                                        <rect key="frame" x="10" y="102" width="580" height="36"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rTK-rg-TUd">
+                                                <rect key="frame" x="37" y="0.0" width="543" height="36"/>
+                                                <color key="backgroundColor" red="0.91372549020000005" green="0.92549019610000005" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="qaF-ZA-fAj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="9qy-la-Xb1" id="nq0-M4-B9P"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXd-ft-sPr">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                <color key="backgroundColor" red="0.91372549020000005" green="0.92549019610000005" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="36" id="hz3-mr-NDf"/>
+                                                    <constraint firstAttribute="height" constant="36" id="mXa-Sg-plk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="26"/>
+                                                <state key="normal" title="₹">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.7725490196" green="0.78823529410000004" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="rTK-rg-TUd" secondAttribute="bottom" id="0XW-qH-pva"/>
+                                            <constraint firstItem="gXd-ft-sPr" firstAttribute="leading" secondItem="j23-NK-6Xa" secondAttribute="leading" id="d2i-vX-g9G"/>
+                                            <constraint firstAttribute="height" constant="36" id="eis-bW-OjB"/>
+                                            <constraint firstItem="rTK-rg-TUd" firstAttribute="top" secondItem="j23-NK-6Xa" secondAttribute="top" id="qKu-4j-YLJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="rTK-rg-TUd" secondAttribute="trailing" id="qnD-da-vZt"/>
+                                            <constraint firstItem="rTK-rg-TUd" firstAttribute="leading" secondItem="gXd-ft-sPr" secondAttribute="trailing" constant="1" id="sK4-cj-7g3"/>
+                                            <constraint firstItem="gXd-ft-sPr" firstAttribute="top" secondItem="j23-NK-6Xa" secondAttribute="top" id="vcl-45-o8Z"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="t1K-Ng-Iir" secondAttribute="trailing" constant="10" id="8Ar-kZ-RFa"/>
+                                    <constraint firstAttribute="trailing" secondItem="IPM-Uk-UCa" secondAttribute="trailing" constant="10" id="BO6-mR-nvj"/>
+                                    <constraint firstItem="IPM-Uk-UCa" firstAttribute="leading" secondItem="Ylb-dN-VX2" secondAttribute="leading" constant="10" id="BVp-6F-gYA"/>
+                                    <constraint firstAttribute="trailing" secondItem="j23-NK-6Xa" secondAttribute="trailing" constant="10" id="HpT-fg-lpY"/>
+                                    <constraint firstItem="mJS-lQ-zFS" firstAttribute="centerX" secondItem="Ylb-dN-VX2" secondAttribute="centerX" id="KQ0-pB-Uf4"/>
+                                    <constraint firstItem="IPM-Uk-UCa" firstAttribute="top" secondItem="t1K-Ng-Iir" secondAttribute="bottom" constant="10" id="MlG-es-RFj"/>
+                                    <constraint firstItem="mJS-lQ-zFS" firstAttribute="top" secondItem="j23-NK-6Xa" secondAttribute="bottom" constant="18" id="VwZ-uA-5Sq"/>
+                                    <constraint firstItem="t1K-Ng-Iir" firstAttribute="leading" secondItem="Ylb-dN-VX2" secondAttribute="leading" constant="10" id="ajj-JE-eP5"/>
+                                    <constraint firstItem="j23-NK-6Xa" firstAttribute="leading" secondItem="Ylb-dN-VX2" secondAttribute="leading" constant="10" id="jv6-Yr-pe5"/>
+                                    <constraint firstItem="j23-NK-6Xa" firstAttribute="top" secondItem="IPM-Uk-UCa" secondAttribute="bottom" constant="10" id="mpq-N2-r8z"/>
+                                    <constraint firstAttribute="height" constant="220" id="oD6-g7-rbA"/>
+                                    <constraint firstItem="t1K-Ng-Iir" firstAttribute="top" secondItem="Ylb-dN-VX2" secondAttribute="top" constant="10" id="uXr-UB-a29"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91372549020000005" green="0.92549019610000005" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ylb-dN-VX2" firstAttribute="top" secondItem="Ez5-1u-aGp" secondAttribute="bottom" id="5cy-yh-h0n"/>
+                            <constraint firstItem="Ylb-dN-VX2" firstAttribute="leading" secondItem="BfB-ba-bTt" secondAttribute="leading" id="Vas-8x-bbf"/>
+                            <constraint firstAttribute="trailing" secondItem="Ylb-dN-VX2" secondAttribute="trailing" id="eZV-r5-iwY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="PAY BILLS" id="Lnq-2z-QMA"/>
+                    <connections>
+                        <outlet property="amountSymbol" destination="gXd-ft-sPr" id="L3y-DR-dDA"/>
+                        <outlet property="amountTextField" destination="rTK-rg-TUd" id="SwA-qv-tnX"/>
+                        <outlet property="mobileSymbol" destination="hr4-NG-os5" id="W7e-o3-h7J"/>
+                        <outlet property="mobileTextField" destination="u0e-LK-zch" id="Vl4-3r-qrT"/>
+                        <outlet property="operatorSymbol" destination="Gi5-bY-Qq4" id="eR0-Tg-5Zh"/>
+                        <outlet property="operatorTextField" destination="clf-yF-f8M" id="6ow-ww-5jT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RAw-YO-CeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3245" y="679"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E3j-lx-CE8">
@@ -1109,6 +1305,8 @@ You have paid $100</string>
         </scene>
     </scenes>
     <resources>
+        <image name="dth" width="30" height="30"/>
+        <image name="mobile" width="30" height="30"/>
         <image name="paysay_qr" width="72" height="72"/>
     </resources>
 </document>
