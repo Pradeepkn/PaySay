@@ -43,18 +43,12 @@ static NSString *kPayBillSegueIdentifier = @"PayBillSegue";
 }
 
 - (void)setIconButton {
-    if (OS_VERSION_BEFORE(7.0f)) {
-        UIButton *btn   = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame       = CGRectMake(0.0f, 0.0f, 44.0f, 44.0f);
-        btn.contentMode = UIViewContentModeCenter;
-        [btn setImage:[UIImage imageNamed:@"launcher"] forState:UIControlStateNormal];
-        [btn addTarget:self action:@selector(onBackButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithCustomView:btn];
-        self.navigationItem.leftBarButtonItem = backButton;
-    } else {
-        UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"launcher"] style:UIBarButtonItemStylePlain target:self action:@selector(onBackButtonClicked:)];
-        self.navigationItem.leftBarButtonItem = backButton;
-    }
+    UIButton *settingsView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    [settingsView addTarget:self action:@selector(onBackButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [settingsView setBackgroundImage:[UIImage imageNamed:@"icon_xxhdpi"] forState:UIControlStateNormal];
+    UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithCustomView:settingsView];
+    [self.navigationItem setLeftBarButtonItem:settingsButton];
+    self.title = @"PAYSAY";
 }
 
 - (void)onBackButtonClicked:(id)sender {

@@ -559,7 +559,7 @@
             </objects>
             <point key="canvasLocation" x="1021" y="247"/>
         </scene>
-        <!--PAYSAY-->
+        <!--Home View Controller-->
         <scene sceneID="lSw-u6-kGb">
             <objects>
                 <viewController storyboardIdentifier="PSHomeViewController" id="HLk-yX-b74" customClass="PSHomeViewController" sceneMemberID="viewController">
@@ -749,9 +749,6 @@ You have paid $100</string>
                             <constraint firstItem="gvN-DI-G3M" firstAttribute="top" secondItem="USj-gX-ruD" secondAttribute="bottom" constant="8" id="qcZ-CY-7gy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="PAYSAY" id="yl0-mO-j9d">
-                        <barButtonItem key="leftBarButtonItem" id="Zyc-bs-Shu"/>
-                    </navigationItem>
                     <connections>
                         <outlet property="myAccountContainerView" destination="0s7-VD-djU" id="61S-Rb-Zr6"/>
                         <outlet property="myAccountInfoLabel" destination="mjv-7S-DLi" id="NCv-p5-aS7"/>
@@ -1288,7 +1285,7 @@ You have paid $100</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P3V-l6-47z" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Zeq-IV-Tns">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Zeq-IV-Tns">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
