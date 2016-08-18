@@ -44,6 +44,10 @@ static NSString *const kBillNumberKey = @"bill_number";
 static NSString *const kBasketKey = @"basket";
 static NSString *const kUseRewardsKey = @"use_rewards";
 
+static NSString *const kService = @"service";
+static NSString *const kRechargeNumber = @"recharge_number";
+static NSString *const kOperatorCode = @"operator_code";
+
 
 
 #endif /* AppConstants_h */

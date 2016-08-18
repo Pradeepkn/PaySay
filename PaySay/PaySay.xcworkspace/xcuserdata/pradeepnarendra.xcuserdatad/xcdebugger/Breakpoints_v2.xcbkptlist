@@ -25,13 +25,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/TTPLAPIManager/Classes/APIManager.m"
-            timestampString = "493241111.230304"
+            filePath = "PaySay/ViewControllers/PSOperatorsViewController.m"
+            timestampString = "493246192.205783"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "-makeAPIRequestWithObject:shouldAddOAuthHeader:andCompletionBlock:"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "-rechargeButtonClicked:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PSOperatorsViewController rechargeButtonClicked:]"
+                  moduleName = "PaySay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pradeepnarendra/Documents/Passion/PaySay_Git/PaySay/PaySay/ViewControllers/PSOperatorsViewController.m"
+                  timestampString = "493247616.493127"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "1712">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__51-[PSOperatorsViewController rechargeButtonClicked:]_block_invoke"
+                  moduleName = "PaySay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pradeepnarendra/Documents/Passion/PaySay_Git/PaySay/PaySay/ViewControllers/PSOperatorsViewController.m"
+                  timestampString = "493247616.493327"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PaySay/ViewControllers/PSOperatorsViewController.m"
+            timestampString = "493246192.205783"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "-rechargeButtonClicked:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

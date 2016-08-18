@@ -1142,6 +1142,7 @@ You have paid $100</string>
                                                     <constraint firstAttribute="height" constant="36" id="5jc-P6-p1h"/>
                                                     <constraint firstAttribute="width" constant="36" id="ooZ-HZ-60v"/>
                                                 </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
                                                 <state key="normal" image="dth"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTP-io-6nX">
@@ -1176,7 +1177,7 @@ You have paid $100</string>
                                                     <constraint firstAttribute="height" constant="36" id="93z-kK-Yxo"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="9qy-la-Xb1" id="nVf-yA-e5N"/>
                                                 </connections>
@@ -1188,6 +1189,7 @@ You have paid $100</string>
                                                     <constraint firstAttribute="height" constant="36" id="DbG-Zw-gQH"/>
                                                     <constraint firstAttribute="width" constant="36" id="gd1-a1-CpC"/>
                                                 </constraints>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
                                                 <state key="normal" image="mobile"/>
                                             </button>
                                         </subviews>
@@ -1224,7 +1226,7 @@ You have paid $100</string>
                                                     <constraint firstAttribute="width" constant="36" id="hz3-mr-NDf"/>
                                                     <constraint firstAttribute="height" constant="36" id="mXa-Sg-plk"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="26"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="22"/>
                                                 <state key="normal" title="₹">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -1285,11 +1287,14 @@ You have paid $100</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P3V-l6-47z" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Zeq-IV-Tns">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" backIndicatorImage="IQButtonBarArrowLeft.png" id="Zeq-IV-Tns">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.29411764709999999" green="0.72549019609999998" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1302,6 +1307,7 @@ You have paid $100</string>
         </scene>
     </scenes>
     <resources>
+        <image name="IQButtonBarArrowLeft.png" width="12" height="21"/>
         <image name="dth" width="30" height="30"/>
         <image name="mobile" width="30" height="30"/>
         <image name="paysay_qr" width="72" height="72"/>

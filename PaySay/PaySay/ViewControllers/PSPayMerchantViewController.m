@@ -33,8 +33,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.emailTextField.text = [PSAppUtilityClass getUserEmail];
-    self.title = NSLocalizedString(@"Pay Merchant", nil);
-    // Do any additional setup after loading the view.
+    self.title = NSLocalizedString(@"PAY MERCHANT", nil);
+    [self setIconButton];
+}
+
+- (void)setIconButton {
+    UIButton *settingsView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 12, 20)];
+    [settingsView addTarget:self action:@selector(onBackButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [settingsView setBackgroundImage:[UIImage imageNamed:@"backArrow"] forState:UIControlStateNormal];
+    UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithCustomView:settingsView];
+    [self.navigationItem setLeftBarButtonItem:settingsButton];
+    self.title = @"PAYSAY";
+}
+
+- (void)onBackButtonClicked:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)qrCodeButtonClicked:(id)sender {

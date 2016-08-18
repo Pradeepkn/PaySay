@@ -23,7 +23,21 @@ static NSString *const kPayBillSegueIdentifier  = @"PayBillSegue";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"Pay Bill", nil);
+    self.title = NSLocalizedString(@"PAY BILLS", nil);
+    [self setIconButton];
+}
+
+- (void)setIconButton {
+    UIButton *settingsView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 12, 20)];
+    [settingsView addTarget:self action:@selector(onBackButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [settingsView setBackgroundImage:[UIImage imageNamed:@"backArrow"] forState:UIControlStateNormal];
+    UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithCustomView:settingsView];
+    [self.navigationItem setLeftBarButtonItem:settingsButton];
+    self.title = @"PAYSAY";
+}
+
+- (void)onBackButtonClicked:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark -
@@ -65,9 +79,11 @@ static NSString *const kPayBillSegueIdentifier  = @"PayBillSegue";
             cell.billTypeImageView.image = [UIImage imageNamed:@"dth_big"];
             cell.billTypeLabel.text = @"DTH";
             break;
-        case 3:
+        case 3:{
             cell.billTypeImageView.image = [UIImage imageNamed:@"electricity_big"];
             cell.billTypeLabel.text = @"Electricity";
+            cell.alpha = 0.5f;
+        }
             break;
             
         default:

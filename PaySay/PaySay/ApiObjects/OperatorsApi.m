@@ -42,6 +42,7 @@
         Operators *operatorObject = [[Operators alloc] init];
         operatorObject.operatorCode = [NSString stringWithFormat:@"%@",operatorEntryObject[@"operator_code"]];
         operatorObject.operatorName = [NSString stringWithFormat:@"%@",operatorEntryObject[@"operator_name"]];
+        operatorObject.operatorsService = [NSString stringWithFormat:@"%@",operatorEntryObject[@"service"]];
         [self.operatorsObjects addObject:operatorObject];
     }
 }

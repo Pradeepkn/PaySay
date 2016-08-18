@@ -83,6 +83,7 @@ static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
     if ([[NSUserDefaults standardUserDefaults] objectForKey:kUsernameKey] && [[NSUserDefaults standardUserDefaults] objectForKey:kPasswordKey]) {
+        [self topSignInButtonClicked:nil];
         self.signInPhoneEmailTxtFld.text = [[NSUserDefaults standardUserDefaults] objectForKey:kUsernameKey];
         self.signInPasswordTxtFld.text = [[NSUserDefaults standardUserDefaults] objectForKey:kPasswordKey];
         [self verifyToken:[[NSUserDefaults standardUserDefaults] objectForKey:kUsernameKey] andPassword:[[NSUserDefaults standardUserDefaults] objectForKey:kPasswordKey]];
