@@ -13,7 +13,7 @@
 
 #pragma mark - Configuration -
 // URLs
-static NSString *const APIStaginUrl = @"https://sandbox.letspool.co";
+static NSString *const APIStaginUrl = @"https://spool-dev.elasticbeanstalk.com"; //@"https://sandbox.letspool.co";//
 static NSString *const APIProductionUrl = @"https://paysay.me";
 
 // Change the flag based on server.

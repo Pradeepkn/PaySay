@@ -9,6 +9,8 @@
 #import "PSAppUtilityClass.h"
 #import "BLMultiColorLoader.h"
 #import "AppConstants.h"
+#import "PaySayAlertViewController.h"
+#import "UIColor+AppColor.h"
 
 @implementation PSAppUtilityClass
 
@@ -76,6 +78,16 @@
 
 + (NSString *)getUserPhoneNUmber {
     return [[NSUserDefaults standardUserDefaults] objectForKey:kPhoneNumberKey];
+}
+
++ (void)showErrorMessage:(NSString *)message {
+    PaySayAlertModel *paySayModel = [[PaySayAlertModel alloc] init];
+    paySayModel.secondaryButtonColor = [UIColor appBlueColor];
+    paySayModel.kAlertMarginOffSet = 20.0f;
+    paySayModel.alertMessageBody = message;
+    paySayModel.buttonsArray = [NSMutableArray arrayWithObjects:NSLocalizedString(@"Ok", nil), nil];
+    [[PaySayAlertViewController sharedInstance] displayAlertViewOnView:[[UIApplication sharedApplication] keyWindow] withModel:paySayModel andCallBack:^(UIButton *sender) {
+    }];
 }
 
 @end

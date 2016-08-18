@@ -75,7 +75,9 @@ static NSString *const RootKey = @"Root";
         [requestManager.requestSerializer setValue:obj forHTTPHeaderField:key];
     }];
     NSDictionary *parametersDictionary = [apiObject requestParameters];
-    
+    requestManager.securityPolicy.allowInvalidCertificates = YES;
+    [requestManager.securityPolicy setAllowInvalidCertificates:YES];
+    [requestManager.securityPolicy setValidatesDomainName:NO];
     if ([apiObject.requestType isEqualToString:APIPost]) {
         /// POST
         AFHTTPRequestOperation *operation  =  [requestManager POST:apiObject.urlForAPIRequest

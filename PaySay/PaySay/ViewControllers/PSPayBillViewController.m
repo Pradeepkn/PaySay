@@ -23,6 +23,7 @@ static NSString *const kPayBillSegueIdentifier  = @"PayBillSegue";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = NSLocalizedString(@"Pay Bill", nil);
 }
 
 #pragma mark -

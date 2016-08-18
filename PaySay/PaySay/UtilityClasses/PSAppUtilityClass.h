@@ -15,8 +15,6 @@
 
 @property (strong, nonatomic)  BLMultiColorLoader *multiColorLoader;
 
-+ (BLMultiColorLoader *)getMultiColorLoader;
-
 + (void)showLoaderOnView:(UIView *)view;
 
 + (void)hideLoaderFromView:(UIView *)view;
@@ -32,5 +30,7 @@
 + (NSString *)getUserEmail;
 
 + (NSString *)getUserPhoneNUmber;
+
++ (void)showErrorMessage:(NSString *)message;
 
 @end

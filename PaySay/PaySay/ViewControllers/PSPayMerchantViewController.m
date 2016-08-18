@@ -10,6 +10,8 @@
 #import "QRCodeReaderViewController.h"
 #import "PSAppUtilityClass.h"
 #import "CreateMerchatPayCodeApi.h"
+#import "PaySayAlertViewController.h"
+#import "UIColor+AppColor.h"
 
 @interface PSPayMerchantViewController ()<QRCodeReaderDelegate>{
     QRCodeReaderViewController *vc;
@@ -31,6 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.emailTextField.text = [PSAppUtilityClass getUserEmail];
+    self.title = NSLocalizedString(@"Pay Merchant", nil);
     // Do any additional setup after loading the view.
 }
 
@@ -84,6 +87,7 @@
         [PSAppUtilityClass hideLoaderFromView:weakSelf.view];
         if (!error) {
         }else{
+            [PSAppUtilityClass showErrorMessage:NSLocalizedString(@"Please try again later", nil)];
         }
     }];
 }

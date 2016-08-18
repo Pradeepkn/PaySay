@@ -25,29 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PaySay/ViewControllers/PSPayMerchantViewController.m"
-            timestampString = "492039757.561021"
+            filePath = "Pods/TTPLAPIManager/Classes/APIManager.m"
+            timestampString = "493241111.230304"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "-proceedToPayButtonClicked:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PaySay/ViewControllers/PSPayMerchantViewController.m"
-            timestampString = "492039759.863018"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "-proceedToPayButtonClicked:"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "-makeAPIRequestWithObject:shouldAddOAuthHeader:andCompletionBlock:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

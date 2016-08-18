@@ -21,6 +21,7 @@
 #import "UITextField+PaddingText.h"
 #import <TTPLLibrary/NSString+Validation.h>
 #import "NSAttributedString+StringWithImage.h"
+#import "PaySayAlertViewController.h"
 
 static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
 
@@ -150,6 +151,7 @@ static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
             weakSelf.otpContainerView.hidden = NO;
             [weakSelf.otpTextField becomeFirstResponder];
         }else{
+            [PSAppUtilityClass showErrorMessage:NSLocalizedString(@"Please try again later", nil)];
         }
     }];
 }
@@ -176,6 +178,7 @@ static NSString *const kHomeScreenViewSegueIdentifier = @"HomeScreenViewSegue";
             }
             [self performSegueWithIdentifier:kHomeScreenViewSegueIdentifier sender:nil];
         }else{
+            [PSAppUtilityClass showErrorMessage:NSLocalizedString(@"Please try again later", nil)];
         }
     }];
 }
