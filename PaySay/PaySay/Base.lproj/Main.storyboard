@@ -989,11 +989,48 @@ You have paid $100</string>
                         <outlet property="phoneNumberTextField" destination="50W-1L-iWk" id="e0v-MZ-339"/>
                         <outlet property="proceedToPayButton" destination="4pl-m6-qkP" id="tOL-2y-Pai"/>
                         <outlet property="qrCodeButton" destination="ouI-So-uKq" id="B2t-Uy-FhY"/>
+                        <segue destination="Nrm-Cy-33p" kind="show" identifier="MerchantPaymentSegue" id="XTt-Au-Qkf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xax-v2-xrN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2504" y="-13"/>
+        </scene>
+        <!--Merchant Payment View Controller-->
+        <scene sceneID="F4h-Ci-nYH">
+            <objects>
+                <viewController storyboardIdentifier="MerchantPaymentViewController" automaticallyAdjustsScrollViewInsets="NO" id="Nrm-Cy-33p" customClass="MerchantPaymentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NnX-tX-vkJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xd3-ZY-ra3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aFc-Tq-wt7">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ieD-wa-Dog">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Nrm-Cy-33p" id="gov-aE-dJh"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ieD-wa-Dog" firstAttribute="leading" secondItem="aFc-Tq-wt7" secondAttribute="leading" id="2tg-FM-QDh"/>
+                            <constraint firstItem="ieD-wa-Dog" firstAttribute="top" secondItem="NnX-tX-vkJ" secondAttribute="bottom" id="Pbn-Es-HIi"/>
+                            <constraint firstAttribute="trailing" secondItem="ieD-wa-Dog" secondAttribute="trailing" id="hJp-Ry-wV5"/>
+                            <constraint firstItem="Xd3-ZY-ra3" firstAttribute="top" secondItem="ieD-wa-Dog" secondAttribute="bottom" id="nnN-hm-kHs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="ieD-wa-Dog" id="71I-KU-YN7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LZq-Wk-COF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3362" y="-13"/>
         </scene>
         <!--Pay Bill View Controller-->
         <scene sceneID="Yn5-SF-uaC">
@@ -1276,11 +1313,12 @@ You have paid $100</string>
                         <outlet property="mobileTextField" destination="u0e-LK-zch" id="Vl4-3r-qrT"/>
                         <outlet property="operatorSymbol" destination="Gi5-bY-Qq4" id="eR0-Tg-5Zh"/>
                         <outlet property="operatorTextField" destination="clf-yF-f8M" id="6ow-ww-5jT"/>
+                        <segue destination="Nrm-Cy-33p" kind="show" identifier="MerchantPaymentSegue" id="q0i-V3-CYm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAw-YO-CeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3245" y="679"/>
+            <point key="canvasLocation" x="3247" y="740"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E3j-lx-CE8">
@@ -1312,4 +1350,7 @@ You have paid $100</string>
         <image name="mobile" width="30" height="30"/>
         <image name="paysay_qr" width="72" height="72"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="q0i-V3-CYm"/>
+    </inferredMetricsTieBreakers>
 </document>

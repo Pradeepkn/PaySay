@@ -63,7 +63,7 @@ NSMutableDictionary *parametersDictionary;
     }
 
     if (tokenKey.length) {
-        NSDictionary *dictionay = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"Bearer %@", tokenKey], @"Authorization",@"iOS",@"x-cheripo-device-os",[self getUniqueDeviceIdentifierAsString],@"x-cheripo-device-id",@"1" , @"x-cheripo-package-version",CLIENT_KEY,@"x-cheripo-client-id",[UIDevice currentDevice].model ,@"x-cheripo-device-hardware",@"Apple",@"x-cheripo-device-manufacturer",[UIDevice currentDevice].systemVersion,@"x-cheripo-device-version",nil];
+        NSDictionary *dictionay = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%@", tokenKey], @"Authorization",@"iOS",@"x-cheripo-device-os",[self getUniqueDeviceIdentifierAsString],@"x-cheripo-device-id",@"1" , @"x-cheripo-package-version",CLIENT_KEY,@"x-cheripo-client-id",[UIDevice currentDevice].model ,@"x-cheripo-device-hardware",@"Apple",@"x-cheripo-device-manufacturer",[UIDevice currentDevice].systemVersion,@"x-cheripo-device-version",nil];
         return dictionay;
     }else{
         NSDictionary *dictionay = [NSDictionary dictionaryWithObjectsAndKeys:@"iOS",@"x-cheripo-device-os",[self getUniqueDeviceIdentifierAsString],@"x-cheripo-device-id",@"1" , @"x-cheripo-package-version",CLIENT_KEY,@"x-cheripo-client-id",[UIDevice currentDevice].model ,@"x-cheripo-device-hardware",@"Apple",@"x-cheripo-device-manufacturer",[UIDevice currentDevice].systemVersion,@"x-cheripo-device-version",nil];

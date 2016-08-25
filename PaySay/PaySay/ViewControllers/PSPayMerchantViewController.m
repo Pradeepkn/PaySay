@@ -12,6 +12,9 @@
 #import "CreateMerchatPayCodeApi.h"
 #import "PaySayAlertViewController.h"
 #import "UIColor+AppColor.h"
+#import "MerchantPaymentViewController.h"
+
+static NSString *const kMerchantPaymentSegueIdentifier = @"MerchantPaymentSegue";
 
 @interface PSPayMerchantViewController ()<QRCodeReaderDelegate>{
     QRCodeReaderViewController *vc;
@@ -25,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *phoneCodeButton;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UIButton *proceedToPayButton;
+@property (nonatomic, strong) NSString *merchantUrl;
 
 @end
 
@@ -96,9 +100,11 @@
     createMerchatPayCodeApiObject.email = self.emailTextField.text;
     createMerchatPayCodeApiObject.billNumber = self.billNumberTextField.text;
     
-    [[APIManager sharedInstance]makeAPIRequestWithObject:createMerchatPayCodeApiObject shouldAddOAuthHeader:NO andCompletionBlock:^(NSDictionary *responseDictionary, NSError *error) {
+    [[APIManager sharedInstance]makeAPIRequestWithObject:createMerchatPayCodeApiObject shouldAddOAuthHeader:YES andCompletionBlock:^(NSDictionary *responseDictionary, NSError *error) {
         [PSAppUtilityClass hideLoaderFromView:weakSelf.view];
         if (!error) {
+            self.merchantUrl = responseDictionary[@"bill_url"];
+            [self performSegueWithIdentifier:kMerchantPaymentSegueIdentifier sender:self];
         }else{
             [PSAppUtilityClass showErrorMessage:NSLocalizedString(@"Please try again later", nil)];
         }
@@ -122,14 +128,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:kMerchantPaymentSegueIdentifier]) {
+        MerchantPaymentViewController *merchantPaymentViewController = (MerchantPaymentViewController *)[segue destinationViewController];
+        merchantPaymentViewController.merchantUrl = self.merchantUrl;
+    }
 }
-*/
+
 
 @end

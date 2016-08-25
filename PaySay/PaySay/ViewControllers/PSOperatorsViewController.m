@@ -14,6 +14,9 @@
 #import "UIcolor+AppColor.h"
 #import "PaySayAlertViewController.h"
 #import "RechargePaymentApi.h"
+#import "MerchantPaymentViewController.h"
+
+static NSString *const kMerchantPaymentSegueIdentifier = @"MerchantPaymentSegue";
 
 @interface PSOperatorsViewController () {
 }
@@ -25,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *operatorSymbol;
 @property (weak, nonatomic) IBOutlet UIButton *mobileSymbol;
 @property (weak, nonatomic) IBOutlet UIButton *amountSymbol;
+@property (nonatomic, strong) NSString *merchantUrl;
 
 @property (nonatomic, strong) NSMutableArray *operatorsArray;
 @property (nonatomic, strong) NSMutableArray *operatorNamesArray;
@@ -84,6 +88,8 @@
     [[APIManager sharedInstance]makeAPIRequestWithObject:rechargePaymentApiObject shouldAddOAuthHeader:NO andCompletionBlock:^(NSDictionary *responseDictionary, NSError *error) {
         [PSAppUtilityClass hideLoaderFromView:weakSelf.view];
         if (!error) {
+            self.merchantUrl = responseDictionary[@"bill_url"];
+            [self performSegueWithIdentifier:kMerchantPaymentSegueIdentifier sender:self];
         }else{
             [PSAppUtilityClass showErrorMessage:NSLocalizedString(@"Please try again later", nil)];
         }
@@ -153,14 +159,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:kMerchantPaymentSegueIdentifier]) {
+        MerchantPaymentViewController *merchantPaymentViewController = (MerchantPaymentViewController *)[segue destinationViewController];
+        merchantPaymentViewController.merchantUrl = self.merchantUrl;
+    }
 }
-*/
+
 
 @end

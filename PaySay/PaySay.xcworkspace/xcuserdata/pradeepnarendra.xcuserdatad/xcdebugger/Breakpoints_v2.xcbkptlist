@@ -25,46 +25,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PaySay/ViewControllers/PSOperatorsViewController.m"
-            timestampString = "493246192.205783"
+            filePath = "PaySay/ApiObjects/MerchantPaymentViewController.m"
+            timestampString = "493644579.320227"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "-rechargeButtonClicked:"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-viewDidAppear:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[PSOperatorsViewController rechargeButtonClicked:]"
-                  moduleName = "PaySay"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pradeepnarendra/Documents/Passion/PaySay_Git/PaySay/PaySay/ViewControllers/PSOperatorsViewController.m"
-                  timestampString = "493247616.493127"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "1712">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__51-[PSOperatorsViewController rechargeButtonClicked:]_block_invoke"
-                  moduleName = "PaySay"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pradeepnarendra/Documents/Passion/PaySay_Git/PaySay/PaySay/ViewControllers/PSOperatorsViewController.m"
-                  timestampString = "493247616.493327"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "85"
-                  endingLineNumber = "85"
-                  offsetFromSymbolStart = "88">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -73,13 +41,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PaySay/ViewControllers/PSOperatorsViewController.m"
-            timestampString = "493246192.205783"
+            filePath = "PaySay/ApiObjects/MerchantPaymentViewController.m"
+            timestampString = "493644649.622581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "-rechargeButtonClicked:"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-viewDidAppear:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PaySay/ApiObjects/MerchantPaymentViewController.m"
+            timestampString = "493732113.792657"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "-webViewDidFinishLoad:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
